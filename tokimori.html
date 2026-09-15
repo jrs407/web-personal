@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="tk.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokimori · José Carlos Ruiz Sánchez</title>
+  <meta name="description" content="Detalle del proyecto Tokimori de José Carlos Ruiz Sánchez: aplicación web full-stack para gestionar colecciones personales con canvas visual, notas, checklists y seguimiento de tiempo, sobre una arquitectura de 6 microservicios en Node.js/TypeScript tras un API Gateway (nginx), con frontend en React 19 y despliegue completo con Docker Compose." />
+  <meta name="author" content="José Carlos Ruiz Sánchez" />
+  <meta name="keywords" content="Tokimori, React 19, TypeScript, Vite, React Router, Node.js, Express, MySQL, JWT, Docker, Docker Compose, nginx, Microservicios, API Gateway, José Carlos Ruiz Sánchez" />
+  <link rel="canonical" href="https://jrs407.github.io/web-personal/tokimori.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tokimori · José Carlos Ruiz Sánchez" />
+  <meta property="og:description" content="Tokimori: aplicación web full-stack con canvas visual, notas, checklists y seguimiento de tiempo, sobre 6 microservicios en Node.js/TypeScript, frontend en React 19 y despliegue con Docker Compose." />
+  <meta property="og:url" content="https://jrs407.github.io/web-personal/tokimori.html" />
+  <meta property="og:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/tokimori.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tokimori · José Carlos Ruiz Sánchez" />
+  <meta name="twitter:description" content="Tokimori: aplicación web full-stack con canvas visual, notas, checklists y seguimiento de tiempo, sobre 6 microservicios en Node.js/TypeScript, frontend en React 19 y despliegue con Docker Compose." />
+  <meta name="twitter:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/tokimori.png" />
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/experiencia.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">JC</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="experiencia.html" data-i18n="nav.experience">Experiencia laboral</a></li>
+        <li><a href="habilidades.html" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="formacion.html" data-i18n="nav.education">Formación Académica</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" data-i18n-label="themeToggle" aria-label="Cambiar tema">🌙</button>
+        <button class="language-toggle" id="languageToggle" aria-label="Cambiar idioma">🇬🇧</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-label="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="exp-hero">
+      <div class="container">
+        <p class="exp-eyebrow" data-i18n="tk.eyebrow">Proyectos · Detalle del proyecto</p>
+        <h1 data-i18n="tk.h1">Tokimori</h1>
+        <p class="exp-lead" data-i18n="tk.lead">
+          Aplicación web full-stack para gestionar una colección personal de
+          elementos con seguimiento de tiempo, notas en Markdown, checklists y
+          un lienzo visual por elemento. Construida sobre una arquitectura de
+          6 microservicios en Node.js/TypeScript tras un API Gateway (nginx),
+          con frontend en React 19 y despliegue completo con Docker Compose.
+        </p>
+        <ul class="exp-tags exp-hero-tags">
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MySQL</li>
+          <li>Docker</li>
+        </ul>
+        <ul class="exp-detail-toc">
+          <li><a href="#contexto" data-i18n="tk.toc.context">Contexto</a></li>
+          <li><a href="#descripcion" data-i18n="tk.toc.description">Descripción</a></li>
+          <li><a href="#decisiones" data-i18n="tk.toc.decisions">Decisiones técnicas</a></li>
+          <li><a href="#arquitectura" data-i18n="tk.toc.architecture">Arquitectura y stack</a></li>
+          <li><a href="#balance" data-i18n="tk.toc.balance">Balance</a></li>
+        </ul>
+
+        <figure class="exp-hero-media">
+          <img src="assets/img/Proyecto/tokimori.png" data-i18n-alt="tk.hero.imgAlt" alt="Imagen del proyecto Tokimori" draggable="false" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contexto">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="tk.context.title">Contexto del proyecto</h2>
+
+        <dl class="exp-detail-meta reveal-left">
+          <dt data-i18n="tk.context.type.dt">Tipo</dt>
+          <dd data-i18n="tk.context.type.dd">Proyecto personal</dd>
+
+          <dt data-i18n="tk.context.period.dt">Periodo</dt>
+          <dd data-i18n="tk.context.period.dd">Febrero 2026 – Agosto 2026</dd>
+
+          <dt data-i18n="tk.context.status.dt">Estado</dt>
+          <dd data-i18n="tk.context.status.dd">Finalizado</dd>
+
+          <dt data-i18n="tk.context.stack.dt">Stack principal</dt>
+          <dd data-i18n="tk.context.stack.dd">React 19 + Node.js/Express + MySQL, 6 microservicios tras un API Gateway (nginx), con Docker Compose</dd>
+
+          <dt data-i18n="tk.context.code.dt">Código</dt>
+          <dd data-i18n="tk.context.code.dd">Repositorio privado; disponible bajo petición.</dd>
+
+          <dt data-i18n="tk.context.demo.dt">Demo</dt>
+          <dd><a href="https://www.youtube.com/watch?v=hSbAzT15mxI" target="_blank" rel="noopener" data-i18n="tk.context.demo.dd">Ver vídeo en YouTube</a></dd>
+        </dl>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="tk.context.origin.h3">Cómo surgió</h3>
+          <p data-i18n="tk.context.origin.p">
+            La razón principal es la falta de aplicaciones que permitan
+            organizar correctamente toda la información combinando notas de
+            texto, checklists y un canvas visual que deje estructurarlo todo
+            de esa manera. La mayoría de las apps se centran en un aspecto
+            más plano: solo notas, solo checklists o solo seguimiento de
+            tiempo, sin conectarlo todo en un mismo espacio visual. A la vez,
+            quería un proyecto lo bastante grande como para poner en práctica
+            un stack completo: autenticación, una arquitectura de
+            microservicios, un frontend con estado complejo (temporizadores
+            persistentes, canvas con undo/redo, drag &amp; drop) y un
+            despliegue reproducible con Docker.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="tk.context.video.h3">Vídeo de demostración</h3>
+          <div class="exp-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/hSbAzT15mxI"
+              title="Tokimori: vídeo de demostración"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="descripcion">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="tk.desc.title">Descripción del proyecto</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="tk.desc.what.h3">Qué es</h3>
+          <p data-i18n="tk.desc.what.p">
+            El núcleo de Tokimori es el canvas: un lienzo visual por elemento
+            donde se combinan notas, checklists, imágenes y formas de forma
+            libre. Alrededor de él, la aplicación permite organizar cualquier
+            tipo de colección o proyecto personal (videojuegos, libros,
+            series, estudios o lo que haga falta), con notas de texto,
+            checklists con tareas anidadas y seguimiento de tiempo, además de
+            estadísticas globales y logros desbloqueables.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="tk.desc.includes.h3">Qué incluye</h3>
+          <ul>
+            <li data-i18n="tk.desc.includes.li1">Diseñé una arquitectura de 6 microservicios (auth, items, colección, notas, objetivos/canvas, sesiones) en Node.js + Express 5 + TypeScript, cada uno con su responsabilidad y base de datos MySQL compartida (8 tablas).</li>
+            <li data-i18n="tk.desc.includes.li2">Implementé un API Gateway con nginx como único punto de entrada público; los servicios internos no son accesibles desde fuera de la red Docker, con enrutado por path al frontend y a cada servicio.</li>
+            <li data-i18n="tk.desc.includes.li3">Autenticación con JWT (tokens de 7 días) sobre cookies secure, hashing con bcrypt, y endurecimiento con helmet, rate limiting y CORS configurable.</li>
+            <li data-i18n="tk.desc.includes.li4">Desarrollé un canvas visual por elemento con la HTML5 Canvas API sin librerías: dibujo libre, formas, imágenes y texto, con arrastre, redimensionado y rotación, historial de deshacer/rehacer y control de capas (z-index).</li>
+            <li data-i18n="tk.desc.includes.li5">Frontend en React 19 + Vite 7 + React Router 7 + TypeScript, con React Compiler, CSS Modules, sistema de i18n propio (es/en) e interfaz con tema claro/oscuro/automático y color de acento configurable.</li>
+            <li data-i18n="tk.desc.includes.li6">Creé utilidades a medida: drag &amp; drop con animaciones FLIP (hook useFlipList), render de Markdown propio, temporizador flotante persistente entre páginas y notificaciones del navegador.</li>
+            <li data-i18n="tk.desc.includes.li7">Panel de estadísticas globales (horas totales, racha de días, gráfico de 7 días), sistema de logros desbloqueables, panel de administración y cuenta demo.</li>
+            <li data-i18n="tk.desc.includes.li8">Testing con Vitest + Testing Library (frontend) y Jest + Supertest (backend); contenerización completa con Docker Compose separando configuración de producción (frontend compilado servido por nginx) y override de desarrollo (Vite hot-reload).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="decisiones">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="tk.decisions.title">Decisiones técnicas</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="tk.decisions.p">
+            Estas son las decisiones técnicas más relevantes del proyecto y el
+            razonamiento detrás de cada una:
+          </p>
+          <ul>
+            <li data-i18n="tk.decisions.li1">API Gateway como único punto de entrada: en vez de exponer cada microservicio con su propio puerto, nginx centraliza el enrutado por prefijo de ruta. Simplifica el CORS, oculta la topología interna y hace que el despliegue en producción solo necesite abrir un puerto.</li>
+            <li data-i18n="tk.decisions.li2">División en microservicios por dominio: autenticación, catálogo, colección, notas, objetivos/canvas y sesiones viven en servicios separados. El objetivo no era la escala sino practicar límites de dominio claros y comunicación desacoplada entre servicios independientes.</li>
+            <li data-i18n="tk.decisions.li3">Imágenes vía Imgur en lugar de subida propia: la primera versión permitía subir imágenes al servidor; se sustituyó por enlaces directos de Imgur para no tener que gestionar almacenamiento, backups ni límites de tamaño de archivo, dejando esa responsabilidad a un servicio ya pensado para ello.</li>
+            <li data-i18n="tk.decisions.li4">Un docker-compose, dos entornos: docker-compose.yml define la configuración de producción (frontend ya compilado, NODE_ENV=production, MySQL sin exponer); docker-compose.override.yml añade solo las diferencias de desarrollo (hot-reload, volúmenes montados) y Docker Compose lo carga automáticamente si no se indica -f. Evita duplicar configuración y reduce las diferencias entre dev y producción.</li>
+            <li data-i18n="tk.decisions.li5">JWT con expiración de 7 días: la autenticación es sin estado, cada petición lleva su token y ningún microservicio necesita compartir sesión con otro. La cookie se marca secure en producción para viajar solo por HTTPS.</li>
+            <li data-i18n="tk.decisions.li6">Estado local con sincronización por eventos: el temporizador flotante persiste en localStorage y se sincroniza entre pestañas y componentes con un CustomEvent propio (tokimori_timer_change), en lugar de añadir una librería de gestión de estado global solo para un caso de uso puntual.</li>
+            <li data-i18n="tk.decisions.li7">Sistema de idiomas propio: la interfaz en español/inglés usa un contexto de React y un diccionario de claves hecho a medida, sin librerías externas de i18n, ya que las necesidades del proyecto (dos idiomas, sin pluralización compleja) no lo justificaban.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arquitectura">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="tk.arch.title">Arquitectura y stack</h2>
+
+        <div class="exp-detail-tech reveal-left">
+          <div>
+            <h3 data-i18n="tk.arch.frontend.h3">Frontend</h3>
+            <ul class="exp-tags">
+              <li>React 19</li>
+              <li>TypeScript</li>
+              <li>Vite 7</li>
+              <li>React Router 7</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="tk.arch.backend.h3">Backend</h3>
+            <ul class="exp-tags">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>TypeScript</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="tk.arch.infra.h3">Infraestructura</h3>
+            <ul class="exp-tags">
+              <li>Docker</li>
+              <li>Docker Compose</li>
+              <li>nginx</li>
+              <li>JWT</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="tk.arch.detail.p">
+            Todo el tráfico entra por un API Gateway (nginx) que es el único
+            puerto publicado al exterior. Por detrás, seis microservicios en
+            Node.js + Express + TypeScript, cada uno con su propia
+            responsabilidad, y una base de datos MySQL compartida. Los
+            microservicios no son alcanzables directamente desde fuera de la
+            red de Docker: el gateway enruta cada petición según el prefijo
+            de la ruta.
+          </p>
+          <ul>
+            <li data-i18n="tk.arch.detail.li1">gateway: punto de entrada único; enruta cada petición al frontend o al microservicio correspondiente según el prefijo de la ruta.</li>
+            <li data-i18n="tk.arch.detail.li2">authenticationService (/auth): registro, login y gestión de tokens JWT.</li>
+            <li data-i18n="tk.arch.detail.li3">gameService (/items): CRUD del catálogo de elementos.</li>
+            <li data-i18n="tk.arch.detail.li4">libraryService (/collection): colección del usuario (favoritos, pins y horas).</li>
+            <li data-i18n="tk.arch.detail.li5">notesService (/notes): notas por elemento.</li>
+            <li data-i18n="tk.arch.detail.li6">objectivesService (/objectives, /canvas): checklists, tareas y canvas.</li>
+            <li data-i18n="tk.arch.detail.li7">sessionService (/sessions): registro de sesiones de tiempo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="balance">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="tk.balance.title">Balance</h2>
+        <p class="reveal-left" data-i18n="tk.balance.lead">
+          Tokimori llegó a un cierre real, no a un abandono: los últimos
+          commits no son funcionalidades a medio construir, sino tareas
+          propias de pulir un proyecto antes de mostrarlo: cuenta demo,
+          documentación de la API, panel de administración, tests añadidos a
+          los 6 microservicios, ajustes para desplegar en la nube y un commit
+          final de corrección de errores. Ahora mismo no está desplegado en
+          ninguna plataforma, pero queda todo preparado para hacerlo el día
+          que se decida. El logro principal es haber diseñado y sacado
+          adelante en solitario un backend de 6 microservicios reales (con su
+          propio gateway, autenticación JWT y tests), sujeto a un frontend
+          con funcionalidades no triviales como un editor de canvas con
+          capas, deshacer/rehacer y animaciones FLIP, hasta llegar a un
+          estado desplegable y documentado, no solo un prototipo. Es, hasta
+          ahora, el proyecto personal más ambicioso que he terminado, aunque
+          ya tengo en mente otros todavía más ambiciosos.
+        </p>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="tk.balance.gains.h3">Qué me llevo</h3>
+          <ul>
+            <li data-i18n="tk.balance.gains.li1">La parte más compleja fue el canvas: mantener un historial de deshacer/rehacer coherente con capas (z-index), rotación, redimensionado y distintos tipos de elementos (notas, checklists, imágenes, formas, texto y trazos libres) sin una librería de canvas de terceros.</li>
+            <li data-i18n="tk.balance.gains.li2">También supuso un aprendizaje real coordinar seis servicios independientes que comparten base de datos sin acoplarlos innecesariamente entre sí.</li>
+          </ul>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="tk.balance.different.h3">Qué haría distinto</h3>
+          <ul>
+            <li data-i18n="tk.balance.different.li1">Volviendo a empezar, no elegiría microservicios: montaría un monolito modular en Node.js/Express/TypeScript con los mismos límites de dominio (auth, items, colección, notas, objetivos/canvas, sesiones), pero como módulos internos, cada uno con su propio router y capa de servicio, dentro de un único proceso. Los seis servicios ya comparten una misma base de datos MySQL, así que en la práctica no hay aislamiento de datos ni escalado independiente entre ellos: el proyecto asumió el coste operativo de los microservicios (API Gateway, red Docker, llamadas HTTP entre servicios, seis contenedores que levantar y depurar por separado) sin la principal ventaja que los justificaría. Un monolito modular habría dado la misma separación de responsabilidades en el código, con un despliegue de un solo contenedor, sin llamadas de red internas y con una depuración mucho más simple; si algún módulo necesitara escalar o desplegarse aparte más adelante, se podría extraer entonces, no antes.</li>
+          </ul>
+        </div>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="tk.balance.next.h3">Próximos pasos</h3>
+          <p data-i18n="tk.balance.next.p">
+            El siguiente paso es aprovechar la arquitectura de microservicios
+            para permitir plugins personalizados: módulos independientes que
+            cada usuario pueda activar según sus propias necesidades, sin
+            tocar el resto de la aplicación.
+          </p>
+        </div>
+
+        <a class="exp-back-link reveal-left" href="proyectos.html" data-i18n="tk.balance.back">&#8249; Volver a Proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-contact">
+        <li data-i18n-html="footer.email">Email: <a href="mailto:josecarlosruizsan@gmail.com">josecarlosruizsan@gmail.com</a></li>
+        <li data-i18n-html="footer.phone">Teléfono: <a href="tel:+34608257574">+34 608257574</a></li>
+        <li>GitHub: <a href="https://github.com/jrs407">github.com/jrs407</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jose-carlos-ruiz-sanchez/">linkedin.com/in/jose-carlos-ruiz-sanchez</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/experiencia.js"></script>
+</body>
+</html>
