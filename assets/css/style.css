@@ -274,12 +274,18 @@ img {
 
 .hero-actions {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 50%;
+  margin: -10rem 0 1.5rem auto;
+}
+
+.hero-actions-row {
+  display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: nowrap;
-  width: max-content;
-  max-width: 100%;
-  margin: -10rem 0 1.5rem auto;
 }
 
 .btn {
@@ -308,6 +314,8 @@ img {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  width: 50%;
+  margin-left: auto;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -843,9 +851,16 @@ img {
   }
 
   .hero-actions {
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     margin: 2rem auto 1.5rem;
+  }
+
+  .hero-social {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-actions-row {
+    flex-wrap: wrap;
   }
 }

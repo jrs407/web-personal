@@ -56,7 +56,8 @@ const TRANSLATIONS = {
     "hero.introText":
       "Desarrollador full-stack. En prácticas construí en equipo, backend y frontend, un mapa interactivo que muestra los dispositivos conectados a la red wifi del campus de la Universidad de Almería, con datos actualizados cada 2 minutos mediante ingesta automatizada. Fuera del ámbito académico desarrollo proyectos propios por iniciativa personal, entre ellos Tokimori, una aplicación web full-stack con arquitectura de microservicios.",
     "hero.contact": "Contactar",
-    "hero.downloadCv": "Descargar currículum",
+    "hero.downloadCv": "Descargar CV (español)",
+    "hero.downloadCvEn": "Descargar CV (inglés)",
     "section.projects": "Proyectos",
     "section.experience": "Experiencia laboral",
     "section.skills": "Habilidades Técnicas",
@@ -474,7 +475,8 @@ const TRANSLATIONS = {
     "con.lead": "Esta página reúne en un solo sitio todo lo que necesitas para ponerte en contacto conmigo y para valorar si encajo en tu proceso: los canales por los que puedes contactarme, mi disponibilidad real de incorporación y las respuestas a las preguntas que suelen surgir en una primera toma de contacto. Sigue la misma división que mi currículum y todos los datos coinciden con el pie de esta web.",
     "con.action.call": "Llámame",
     "con.action.email": "Enviar un correo",
-    "con.action.cv": "Descargar currículum (PDF)",
+    "con.action.cv": "Descargar CV en español (PDF)",
+    "con.action.cvEn": "Descargar CV en inglés (PDF)",
     "con.toc.channels": "Canales de contacto",
     "con.toc.availability": "Disponibilidad",
     "con.toc.faq": "Preguntas frecuentes",
@@ -505,8 +507,8 @@ const TRANSLATIONS = {
     "con.faq.q4.h3": "¿Puedo ver tu código?",
     "con.faq.q4.p": 'Parte está publicada en <a href="https://github.com/jrs407">github.com/jrs407</a>, junto al código de este portfolio. Algunos proyectos tienen el repositorio privado: puedo dar acceso de lectura, pero necesito que me lo pidáis primero (por llamada o correo) para conceder el permiso. En <a href="proyectos.html">Proyectos</a> tienes el contexto de cada uno.',
     "con.faq.q5.h3": "¿Tienes CV en PDF?",
-    "con.faq.q5.p": 'Sí: <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>descárgalo aquí</a>. Esta web amplía cada sección de ese documento con contexto real.',
-    "con.note": '<strong>Para quien evalúa el perfil:</strong> los datos de disponibilidad de esta página están actualizados a agosto de 2026. Si algo ha cambiado cuando la leas, o si necesitas una referencia, escríbeme y te respondo el mismo día laborable. Toda la información es coherente con mi <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>currículum en PDF</a>.'
+    "con.faq.q5.p": 'Sí: descárgalo <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>en español</a> o <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" download>en inglés</a>. Esta web amplía cada sección de ese documento con contexto real.',
+    "con.note": '<strong>Para quien evalúa el perfil:</strong> los datos de disponibilidad de esta página están actualizados a agosto de 2026. Si algo ha cambiado cuando la leas, o si necesitas una referencia, escríbeme y te respondo el mismo día laborable. Toda la información es coherente con mi <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>currículum en PDF</a> (también disponible <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" download>en inglés</a>).'
   },
   en: {
     "index.title": "José Carlos Ruiz Sánchez · Full-stack Developer",
@@ -525,7 +527,8 @@ const TRANSLATIONS = {
     "hero.introText":
       "Full-stack developer. During my internship I built, as part of a team and across backend and frontend, an interactive map showing the devices connected to the campus wifi network at the University of Almería, with data refreshed every 2 minutes through automated ingestion. Outside academia I build my own projects on personal initiative, among them Tokimori, a full-stack web app with a microservice architecture.",
     "hero.contact": "Get in touch",
-    "hero.downloadCv": "Download résumé",
+    "hero.downloadCv": "Download CV (Spanish)",
+    "hero.downloadCvEn": "Download CV (English)",
     "section.projects": "Projects",
     "section.experience": "Work experience",
     "section.skills": "Technical Skills",
@@ -943,7 +946,8 @@ const TRANSLATIONS = {
     "con.lead": "This page brings together in one place everything you need to get in touch with me and to assess whether I fit your process: the channels you can reach me through, my real availability to start, and the answers to the questions that usually come up in a first contact. It follows the same structure as my résumé and all the details match the footer of this site.",
     "con.action.call": "Call me",
     "con.action.email": "Send an email",
-    "con.action.cv": "Download résumé (PDF)",
+    "con.action.cv": "Download Spanish CV (PDF)",
+    "con.action.cvEn": "Download English CV (PDF)",
     "con.toc.channels": "Contact channels",
     "con.toc.availability": "Availability",
     "con.toc.faq": "FAQ",
@@ -974,8 +978,8 @@ const TRANSLATIONS = {
     "con.faq.q4.h3": "Can I see your code?",
     "con.faq.q4.p": 'Some of it is published at <a href="https://github.com/jrs407">github.com/jrs407</a>, along with the code for this portfolio. Some projects have a private repository: I can grant read access, but I need you to ask me first (by call or email) to give permission. In <a href="proyectos.html">Projects</a> you have the context for each one.',
     "con.faq.q5.h3": "Do you have a résumé in PDF?",
-    "con.faq.q5.p": 'Yes: <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>download it here</a>. This site expands each section of that document with real context.',
-    "con.note": '<strong>For anyone assessing the profile:</strong> the availability details on this page are current as of August 2026. If something has changed by the time you read it, or if you need a reference, email me and I\'ll reply the same working day. All the information is consistent with my <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>résumé in PDF</a>.'
+    "con.faq.q5.p": 'Yes: download it <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>in Spanish</a> or <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" download>in English</a>. This site expands each section of that document with real context.',
+    "con.note": '<strong>For anyone assessing the profile:</strong> the availability details on this page are current as of August 2026. If something has changed by the time you read it, or if you need a reference, email me and I\'ll reply the same working day. All the information is consistent with my <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" download>résumé in PDF</a> (Spanish; also <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" download>available in English</a>).'
   }
 };
 
