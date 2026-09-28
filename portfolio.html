@@ -82,7 +82,9 @@
         </ul>
 
         <figure class="exp-hero-media">
-          <img src="assets/img/Proyecto/portfolio.png" data-i18n-alt="pf.hero.imgAlt" alt="Imagen del proyecto Portfolio" draggable="false" />
+          <button type="button" class="exp-hero-zoom" data-i18n-label="zoom.open" aria-label="Ampliar imagen">
+            <img src="assets/img/Proyecto/portfolio.png" data-i18n-alt="pf.hero.imgAlt" alt="Imagen del proyecto Portfolio" draggable="false" />
+          </button>
         </figure>
       </div>
     </section>
@@ -171,7 +173,7 @@
           </p>
           <ul>
             <li data-i18n="pf.decisions.li1">HTML, CSS y JavaScript puro, sin framework ni empaquetador. Pages no ejecuta un paso de build, y un sitio estático consume menos memoria y recursos, así que es más difícil topar con los límites del servicio a medida que el sitio crece. A cambio, asumo que no hay componentes reutilizables y que el head, la cabecera y el pie se repiten en cada página.</li>
-            <li data-i18n="pf.decisions.li2">Ocho páginas independientes en lugar de una SPA. Cada URL entrega HTML real en la primera petición, sin router ni renderizado en cliente, lo que favorece el SEO y el rastreo y hace que el contenido no dependa de JavaScript.</li>
+            <li data-i18n="pf.decisions.li2">Nueve páginas independientes en lugar de una SPA. Cada URL entrega HTML real en la primera petición, sin router ni renderizado en cliente, lo que favorece el SEO y el rastreo y hace que el contenido no dependa de JavaScript.</li>
             <li data-i18n="pf.decisions.li3">Sistema de traducción propio: un único objeto con los diccionarios español e inglés en script.js, claves declaradas en el marcado con data-i18n y una función que recorre los nodos y sustituye el texto. El idioma se guarda en localStorage y se aplica al cargar, antes de pintar. Así evito una librería, una petición de red por idioma y un paso de extracción de cadenas; el coste es mantener las traducciones a mano. La cabecera daba problemas al cambiar de idioma al principio; ya está resuelto.</li>
             <li data-i18n="pf.decisions.li4">Tema claro y oscuro mediante un atributo data-theme en la raíz y variables CSS. En la primera visita se respeta prefers-color-scheme y después manda la elección guardada en localStorage; se aplica antes de pintar para no provocar un parpadeo.</li>
             <li data-i18n="pf.decisions.li5">Carruseles, cronologías con buscador y menú responsive escritos a mano, sin dependencias: el carrusel usa transform sobre una pista con arrastre táctil y desactiva la transición mientras se arrastra; las cronologías ordenan por fecha y filtran sobre el texto y unas palabras clave; las apariciones al hacer scroll usan un único IntersectionObserver.</li>
@@ -214,13 +216,13 @@
           <p data-i18n="pf.arch.detail.p">
             No hay separación entre código fuente y compilado: la raíz del
             repositorio es lo que GitHub Pages publica, con un fichero .nojekyll
-            para que sirva los archivos sin procesarlos. En la raíz están las ocho
+            para que sirva los archivos sin procesarlos. En la raíz están las nueve
             páginas HTML y todo lo demás cuelga de assets/, con el CSS y el
             JavaScript organizados en dos capas, una global y otra por página.
           </p>
           <ul>
-            <li data-i18n="pf.arch.detail.li1">CSS en capas. style.css (unas 850 líneas) es lo común: reset, los tokens de diseño como variables CSS (tema claro y su variante [data-theme="dark"]), el contenedor de layout, la cabecera y el pie, los botones, el carrusel y las animaciones de aparición. Cada página añade después una hoja propia solo con sus componentes; experiencia.css la comparten experiencia.html y las páginas de detalle (ual-trace.html y esta), y proyectos.css son cuatro líneas.</li>
-            <li data-i18n="pf.arch.detail.li2">JavaScript con la misma división. script.js (unas 1.000 líneas) lo carga cada página: comportamiento de la cabecera (menú responsive, cambio de tema y de idioma), el objeto TRANSLATIONS con los dos diccionarios, la función que traduce la página, el IntersectionObserver de las apariciones y el carrusel. Después cada página carga un script pequeño; experiencia.js y proyectos.js (unas 57 líneas cada uno) mueven la cronología con buscador y orden, y no hacen nada si su elemento no está en la página. Son scripts clásicos al final de &lt;body&gt;, sin módulos, en un ámbito global compartido.</li>
+            <li data-i18n="pf.arch.detail.li1">CSS en capas. style.css (unas 850 líneas) es lo común: reset, los tokens de diseño como variables CSS (tema claro y su variante [data-theme="dark"]), el contenedor de layout, la cabecera y el pie, los botones, el carrusel y las animaciones de aparición. Cada página añade después una hoja propia solo con sus componentes; experiencia.css la comparten experiencia.html, proyectos.html y las páginas de detalle (ual-trace.html, tokimori.html y esta), y proyectos.css son cuatro líneas.</li>
+            <li data-i18n="pf.arch.detail.li2">JavaScript con la misma división. script.js (unas 1.000 líneas) lo carga cada página: comportamiento de la cabecera (menú responsive, cambio de tema y de idioma), el objeto TRANSLATIONS con los dos diccionarios, la función que traduce la página, el IntersectionObserver de las apariciones y el carrusel. Después cada página carga un script pequeño: experiencia.js y proyectos.js mueven la cronología con buscador y orden, y no hacen nada si su elemento no está en la página; experiencia.js además amplía la imagen de cabecera de las páginas de detalle al hacer clic. Son scripts clásicos al final de &lt;body&gt;, sin módulos, en un ámbito global compartido.</li>
             <li data-i18n="pf.arch.detail.li3">El español es el texto de origen en el marcado y los atributos data-i18n (y sus variantes para title, alt, aria-label y placeholder) nombran la clave. Al cargar, script.js lee el idioma de localStorage, por defecto español, y sustituye el contenido de cada nodo marcado.</li>
             <li data-i18n="pf.arch.detail.li4">En assets/ están las imágenes en subcarpetas por página, con los iconos en su formato original (png, webp o svg) y un placeholder.svg compartido; las tipografías (Space Grotesk e Inter) vienen de Google Fonts con preconnect, y el PDF del currículum en assets/cv/ se enlaza desde la portada.</li>
             <li data-i18n="pf.arch.detail.li5">No hay package.json, dependencias ni compilación: los ficheros se escriben y se sirven tal cual. La única imagen Docker que existe es la del entorno de desarrollo local.</li>

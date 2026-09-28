@@ -55,3 +55,30 @@
   applySort();
   applyFilter();
 })();
+
+// Páginas de detalle: la imagen de cabecera se amplía al hacer clic.
+(function () {
+  const trigger = document.querySelector(".exp-hero-zoom");
+  if (!trigger) return;
+
+  const source = trigger.querySelector("img");
+  const dialog = document.createElement("dialog");
+  dialog.className = "lightbox";
+  dialog.innerHTML =
+    '<button type="button" class="lightbox-close">×</button><img alt="" />';
+  document.body.appendChild(dialog);
+
+  const closeBtn = dialog.querySelector(".lightbox-close");
+  const image = dialog.querySelector("img");
+
+  trigger.addEventListener("click", () => {
+    const dict = TRANSLATIONS[document.documentElement.lang] || {};
+    closeBtn.setAttribute("aria-label", dict["zoom.close"] || "Cerrar imagen ampliada");
+    image.src = source.currentSrc || source.src;
+    image.alt = source.alt;
+    dialog.showModal();
+  });
+
+  // Cualquier clic (imagen, fondo o botón) cierra; Esc lo gestiona el propio <dialog>.
+  dialog.addEventListener("click", () => dialog.close());
+})();
