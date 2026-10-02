@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desarrollador full-stack en el Applied Computing Group · José Carlos Ruiz Sánchez</title>
-  <meta name="description" content="Detalle de mis prácticas como desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: una aplicación web que mostraba sobre un mapa del campus la concentración de dispositivos conectados a la red wifi, casi en tiempo real, con capas de visualización y un módulo de informes." />
+  <meta name="description" content="Detalle de mis prácticas como desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: UAL Trace, una aplicación web que muestra sobre un mapa del campus la ocupación a partir de los dispositivos conectados a la red wifi, con ingesta en n8n, base de datos PostGIS, API en Node.js/Express/TypeScript y frontend en Next.js." />
   <meta name="author" content="José Carlos Ruiz Sánchez" />
   <link rel="canonical" href="https://jrs407.github.io/web-personal/ual-trace.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Desarrollador full-stack en el Applied Computing Group · José Carlos Ruiz Sánchez" />
-  <meta property="og:description" content="Desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: app web que mostraba sobre un mapa del campus la concentración de dispositivos conectados a la red wifi, casi en tiempo real." />
+  <meta property="og:description" content="Desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: UAL Trace, mapa del campus con la ocupación estimada a partir de la red wifi, con ingesta en n8n, PostGIS, API en Node.js/Express y frontend en Next.js." />
   <meta property="og:url" content="https://jrs407.github.io/web-personal/ual-trace.html" />
   <meta property="og:image" content="https://jrs407.github.io/web-personal/assets/img/Foto.jpg" />
   <meta property="og:locale" content="es_ES" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Desarrollador full-stack en el Applied Computing Group · José Carlos Ruiz Sánchez" />
-  <meta name="twitter:description" content="Desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: app web que mostraba sobre un mapa del campus la concentración de dispositivos conectados a la red wifi, casi en tiempo real." />
+  <meta name="twitter:description" content="Desarrollador full-stack en el Applied Computing Group (ACG) de la Universidad de Almería: UAL Trace, mapa del campus con la ocupación estimada a partir de la red wifi, con ingesta en n8n, PostGIS, API en Node.js/Express y frontend en Next.js." />
   <meta name="twitter:image" content="https://jrs407.github.io/web-personal/assets/img/Foto.jpg" />
 
   <link rel="icon" href="data:," />
@@ -61,20 +61,25 @@
         <h1 data-i18n="uat.h1">Desarrollador full-stack en el Applied Computing Group (ACG)</h1>
         <p class="exp-lead" data-i18n="uat.lead">
           Prácticas de desarrollo full-stack en el Applied Computing Group de
-          la Universidad de Almería. El proyecto era una aplicación web que
-          mostraba sobre un mapa del campus la concentración de dispositivos
-          conectados a los puntos de acceso wifi, actualizada casi en tiempo
-          real. Sobre esa base se construyeron varias capas de visualización y
-          un módulo de informes y análisis de datos.
+          la Universidad de Almería, dedicadas a UAL Trace: una aplicación web
+          que muestra sobre un mapa del campus dónde se concentra la gente a
+          partir de los dispositivos conectados a la red wifi, con datos que se
+          renuevan cada 2 minutos. Partiendo de un prototipo de frontend que
+          funcionaba con datos simulados, desarrollé el resto de la plataforma:
+          la ingesta de datos, la base de datos geoespacial, la API, la conexión
+          del frontend con datos reales, nuevas capas de visualización, el
+          módulo de informes y el despliegue.
         </p>
         <ul class="exp-tags exp-hero-tags">
           <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>Leaflet</li>
+          <li>D3.js</li>
           <li>Node.js</li>
           <li>Express.js</li>
           <li>n8n</li>
           <li>PostGIS</li>
           <li>Docker</li>
-          <li>nginx</li>
         </ul>
         <ul class="exp-detail-toc">
           <li><a href="#contexto" data-i18n="uat.toc.context">Contexto</a></li>
@@ -137,63 +142,80 @@
           <h3 data-i18n="uat.desc.idea.h3">La idea de partida</h3>
           <p data-i18n="uat.desc.idea.p">
             El objetivo era una aplicación web que mostrara sobre un mapa del
-            campus la posición de los dispositivos conectados a los puntos de
-            acceso wifi de la universidad. Sobre el mapa se pintaba una malla
-            de hexágonos coloreada según la concentración de dispositivos: rojo
-            donde había más aglomeración y amarillo donde había menos. Los
-            datos se refrescaban casi en tiempo real, con una latencia de unos
-            2 minutos, que era el ritmo de actualización de la fuente.
+            campus dónde se concentra la gente, usando como sensor la propia red
+            wifi de la universidad: la infraestructura Cisco Meraki estima la
+            posición de cada dispositivo conectado a partir de los puntos de
+            acceso que lo detectan. Sobre el mapa se pinta una malla de
+            hexágonos coloreada según el número de dispositivos, de amarillo
+            (poca gente) a rojo (mucha), y en modo en vivo se refresca cada 2
+            minutos, que es la ventana con la que se agregan los datos.
           </p>
         </div>
 
         <div class="exp-detail-card reveal-left reveal-2">
           <h3 data-i18n="uat.desc.purpose.h3">Para qué servía</h3>
           <p data-i18n="uat.desc.purpose.p">
-            Esa información abría bastantes posibilidades de análisis: saber qué
-            edificios concentraban más gente en cada momento, cuántos
-            dispositivos había conectados a cada punto de acceso o intentar
-            inferir patrones de comportamiento a partir de cómo se movía la
-            gente por el campus.
+            Esa información abre bastantes posibilidades de análisis: saber qué
+            edificios y plantas concentran más gente en cada momento, cuánto
+            tiempo se queda la gente en cada planta, qué densidad de personas
+            por metro cuadrado tiene cada edificio o cuáles son los
+            desplazamientos más habituales entre edificios.
           </p>
         </div>
 
         <div class="exp-detail-card reveal-left reveal-3">
           <h3 data-i18n="uat.desc.built.h3">Qué se construyó</h3>
           <p data-i18n="uat.desc.built.p1">
-            Partiendo de la aplicación original con la malla de hexágonos, se
-            fueron añadiendo distintas capas de visualización sobre el mismo
-            mapa:
+            El frontend heredado tenía la malla de hexágonos, las vistas de
+            edificio y unas primeras gráficas, pero funcionaba con datos
+            simulados y ficheros locales, sin backend. Lo conecté a datos reales
+            y, sobre el mismo mapa, fui añadiendo distintas capas de
+            visualización:
           </p>
           <ul>
-            <li data-i18n="uat.desc.built.li1">Un mapa de calor continuo como alternativa a los hexágonos.</li>
-            <li data-i18n="uat.desc.built.li2">
-              Una capa que oscurecía los edificios cuanto mayor era su
-              ocupación.
+            <li data-i18n-html="uat.desc.built.li1">
+              <strong>Densidad.</strong> Un mapa de calor continuo, derivado de
+              la misma malla, como alternativa a los hexágonos.
             </li>
-            <li data-i18n="uat.desc.built.li3">
-              Una capa de rutas entre edificios, que dibujaba el flujo de
-              personas de un edificio a otro cuando se detectaba un
-              desplazamiento significativo en un intervalo de 2 minutos (por
-              ejemplo, unas 100 personas moviéndose entre dos edificios).
+            <li data-i18n-html="uat.desc.built.li2">
+              <strong>Edificio.</strong> Cada edificio se colorea, de amarillo a
+              rojo oscuro, según su ocupación total.
             </li>
-            <li data-i18n="uat.desc.built.li4">
-              Un detalle por edificio: al entrar en uno concreto se veían sus
-              plantas, cuánta gente había en cada una y en qué zona.
+            <li data-i18n-html="uat.desc.built.li3">
+              <strong>Rutas.</strong> Flujos de personas entre edificios,
+              dibujados como arcos con flecha y con un color más intenso cuanta
+              más gente hace el trayecto. Se calculan sobre una ventana de 2
+              horas reconstruyendo la secuencia de posiciones de cada
+              dispositivo y exigiendo una estancia mínima en cada edificio, para
+              no contar como viajes los saltos de la localización wifi en la
+              frontera entre dos edificios. También probé una variante que
+              trazaba las rutas por las calles reales (OSRM) y acabé
+              descartándola.
+            </li>
+            <li data-i18n-html="uat.desc.built.li4">
+              <strong>Detalle por edificio.</strong> Al entrar en un edificio se
+              ve el plano de cada planta con la posición agregada de las
+              personas y cuánta gente hay en cada una.
             </li>
             <li data-i18n-html="uat.desc.built.li5">
-              Un modo histórico: se elegía fecha y hora y se veía ese instante
-              exacto, con un botón de <em>play</em> que reproducía la evolución
-              en el tiempo. Funcionaba con todas las capas.
+              <strong>Modo histórico.</strong> Se elige fecha y hora y se ve ese
+              instante exacto, con un botón de <em>play</em> que reproduce la
+              evolución en el tiempo. Funciona con todas las capas, rutas
+              incluidas.
             </li>
           </ul>
           <p data-i18n="uat.desc.built.p2">
-            Además se desarrolló un módulo de informes, con un apartado de
-            gráficas y datos de interés e inferencia a partir de la información
-            que ya se estaba recogiendo.
+            Además desarrollé un módulo de estadísticas e informes: gráficas
+            globales (reparto por edificio, tendencia de ocupación y zonas más
+            concurridas) y por edificio (ocupación por planta, densidad por m² y
+            tiempo de permanencia), un panel de «Datos de interés» con
+            conclusiones calculadas a partir de los datos y la exportación a PDF
+            de un informe global y de uno por edificio.
           </p>
           <p data-i18n="uat.desc.built.p3">
-            Por debajo, la ingesta de datos se automatizó con n8n y la base de
-            datos (PostGIS) se diseñó específicamente para este caso de uso.
+            Por debajo, la ingesta está automatizada con n8n, los datos viven en
+            una base de datos PostGIS diseñada para este caso de uso y una API
+            en Node.js con Express y TypeScript calcula todas esas métricas.
           </p>
         </div>
       </div>
@@ -203,20 +225,25 @@
       <div class="container">
         <h2 class="section-title reveal-left" data-i18n="uat.contrib.title">Mi aportación</h2>
         <p class="reveal-left" data-i18n="uat.contrib.lead">
-          Partí de un frontend heredado y, en coordinación con mi responsable,
-          sacamos adelante el resto del proyecto: la evolución de ese frontend,
-          la base de datos, el backend, la automatización de la ingesta y la
-          integración de todas las piezas. Yo llevé el grueso del desarrollo y
-          las decisiones de fondo las tomábamos y revisábamos juntos.
+          Salvo el prototipo inicial del frontend, que heredé, el resto del
+          proyecto lo desarrollé yo: el modelo de datos, la ingesta, el
+          backend, la integración con el frontend, la evolución del propio
+          frontend y el despliegue. Mi responsable en el grupo hacía el
+          seguimiento en reuniones periódicas y con él contrastaba el enfoque de
+          las decisiones importantes.
         </p>
 
         <div class="exp-detail-card reveal-left">
           <h3 data-i18n="uat.contrib.frontend.h3">Frontend</h3>
           <p data-i18n="uat.contrib.frontend.p">
-            Heredé un frontend en Next.js de un desarrollador anterior. Lo
-            refactoricé y optimicé, terminé las partes que estaban a medias y
-            seguí desarrollándolo: nuevas vistas, aportaciones de diseño y la
-            interfaz de las distintas capas de visualización.
+            Heredé de un desarrollador anterior un prototipo en Next.js con la
+            malla de hexágonos, las vistas de edificio y algunas gráficas sobre
+            datos simulados. Lo conecté a la API real, terminé lo que estaba a
+            medias, eliminé código muerto y versiones antiguas, y lo seguí
+            desarrollando: las capas de densidad, edificio y rutas, el modo
+            histórico con reproducción, el módulo de informes y PDF, la
+            adaptación a móvil y muchas optimizaciones de carga. A día de hoy,
+            alrededor del 80 % del código del frontend es mío.
           </p>
         </div>
 
@@ -224,40 +251,71 @@
           <h3 data-i18n="uat.contrib.decisions.h3">Decisiones técnicas</h3>
           <ul>
             <li data-i18n-html="uat.contrib.decisions.li1">
-              <strong>Base de datos.</strong> De acuerdo con mi responsable,
-              optamos por una base de datos geoespacial (PostGIS), coherente
-              con la naturaleza del problema (edificios, posiciones y puntos de
-              acceso). Diseñé el modelo: tablas y campos.
+              <strong>Base de datos.</strong> Elegí PostgreSQL con PostGIS porque
+              el problema es geoespacial: edificios con su polígono real, puntos
+              de acceso, posiciones y una malla de hexágonos. Diseñé el modelo
+              (12 tablas con borrado lógico e índices espaciales) y lo fui
+              ampliando con migraciones, entre ellas índices pensados para las
+              consultas por ventana de tiempo.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li2">
-              <strong>Backend.</strong> Propuse Node.js con Express.js y lo
-              acordamos como la mejor opción para este proyecto. Diseñé la API
-              (endpoints, funciones y las pruebas con Jest), revisándola con mi
-              responsable.
+              <strong>Backend.</strong> Node.js con Express y TypeScript. Diseñé
+              una API REST de una treintena de operaciones, documentada con
+              OpenAPI y Swagger UI, y la cubrí con más de 200 pruebas con Vitest
+              y Supertest que simulan la base de datos para servir de red de
+              seguridad en los refactors.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li3">
-              <strong>Ingesta de datos.</strong> Diseñé la automatización en
-              n8n, acordando el enfoque con mi responsable. Partíamos de una URL
-              que devolvía los datos en bruto; en n8n se procesaban y se
-              cifraban para preservar el anonimato antes de almacenarlos.
+              <strong>Ingesta de datos.</strong> n8n, para poder montar y ajustar
+              los flujos rápidamente. La red Meraki envía las observaciones a un
+              webhook; el flujo las agrupa por dispositivo, descarta los
+              movimientos de menos de 2 metros, seudonimiza los identificadores
+              con un hash HMAC-SHA512 antes de guardarlos y suma cada observación
+              al hexágono más cercano mediante una búsqueda de vecino más
+              próximo en PostGIS. Otros flujos cargan los catálogos: edificios y
+              plantas, puntos de acceso, la malla de hexágonos y los polígonos
+              de los edificios.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li4">
-              <strong>Despliegue.</strong> Empaqueté la aplicación con Docker; la
-              puesta en producción tras un proxy inverso nginx la sacamos
-              adelante entre mi responsable y yo.
+              <strong>Preparación de datos.</strong> Scripts en Node.js para
+              asociar los 90 planos de planta de Meraki a sus edificios, extraer
+              de OpenStreetMap el polígono de cada edificio y generar la malla de
+              hexágonos.
+            </li>
+            <li data-i18n-html="uat.contrib.decisions.li5">
+              <strong>Despliegue.</strong> Dockericé frontend y backend con
+              builds multietapa (salida standalone de Next.js, imagen de
+              producción sin dependencias de desarrollo y ejecución con un
+              usuario sin privilegios) y preparé la aplicación para servirse
+              bajo subrutas tras un proxy inverso nginx.
             </li>
           </ul>
         </div>
 
         <div class="exp-detail-card reveal-left reveal-3">
-          <h3 data-i18n="uat.contrib.ongoing.h3">Trabajo continuado</h3>
+          <h3 data-i18n="uat.contrib.privacy.h3">Privacidad</h3>
+          <p data-i18n="uat.contrib.privacy.p">
+            Los datos se trataron como sensibles desde el diseño: la MAC y el
+            identificador de usuario se guardan seudonimizados con HMAC desde la
+            propia ingesta, y lo que muestra la aplicación son siempre recuentos
+            agregados por hexágono, planta o edificio, nunca la posición de una
+            persona concreta.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="uat.contrib.ongoing.h3">Rendimiento y trabajo continuado</h3>
           <p data-i18n="uat.contrib.ongoing.p">
-            A medida que crecía la aplicación fui adaptando todas las capas:
-            nuevas funcionalidades en el frontend, refactor del backend y
-            actualizaciones de la base de datos para darles soporte. También
-            llevé la integración entre backend y frontend, y los problemas que
-            iban surgiendo los resolvíamos entre mi responsable y yo, con
-            reuniones frecuentes para ir ajustando el rumbo.
+            Con datos reales y varios usuarios a la vez aparecieron los
+            problemas de rendimiento, y buena parte de la recta final fue
+            optimizar: una caché en memoria que agrupa las peticiones simultáneas
+            idénticas en una sola consulta, el backend repartido en varios
+            procesos con el módulo cluster de Node.js, índices de cobertura
+            creados en caliente (con una página de mantenimiento para aplicarlos
+            sin acceso directo a la base de datos), un endpoint que sustituyó
+            hasta 13 peticiones secuenciales del modo en vivo por una sola y
+            cargas más ligeras de hexágonos, plantas y rutas en el frontend. A la
+            vez fui adaptando todas las capas a cada nueva funcionalidad.
           </p>
         </div>
       </div>
@@ -273,6 +331,12 @@
             <ul class="exp-tags">
               <li>Next.js</li>
               <li>React</li>
+              <li>TypeScript</li>
+              <li>Leaflet</li>
+              <li>D3.js</li>
+              <li>Recharts</li>
+              <li>jsPDF</li>
+              <li>Tailwind CSS</li>
             </ul>
           </div>
           <div>
@@ -280,14 +344,20 @@
             <ul class="exp-tags">
               <li>Node.js</li>
               <li>Express.js</li>
-              <li>Jest</li>
+              <li>TypeScript</li>
+              <li>OpenAPI / Swagger</li>
+              <li>Vitest</li>
+              <li>Supertest</li>
             </ul>
           </div>
           <div>
             <h3 data-i18n="uat.arch.data.h3">Datos e infraestructura</h3>
             <ul class="exp-tags">
+              <li>PostgreSQL</li>
               <li>PostGIS</li>
               <li>n8n</li>
+              <li>Cisco Meraki</li>
+              <li>OpenStreetMap</li>
               <li>Docker</li>
               <li>nginx</li>
             </ul>
@@ -297,34 +367,45 @@
         <div class="exp-detail-card reveal-left">
           <ul>
             <li data-i18n-html="uat.arch.li1">
-              <strong>Fuente de datos.</strong> Una URL externa que devolvía,
-              en bruto y cada ~2 minutos, unas 3.000 filas con los dispositivos
-              conectados a los puntos de acceso wifi.
+              <strong>Fuente de datos.</strong> La API de localización de Cisco
+              Meraki, que envía periódicamente al webhook de n8n las
+              observaciones de los dispositivos detectados por los puntos de
+              acceso wifi: posición estimada, planta y punto de acceso más
+              cercano.
             </li>
             <li data-i18n-html="uat.arch.li2">
-              <strong>Ingesta (n8n).</strong> Un flujo automatizado que recogía
-              esos datos, los procesaba y los cifraba para preservar el anonimato
-              antes de almacenarlos.
+              <strong>Ingesta (n8n).</strong> Agrupa por dispositivo, filtra los
+              movimientos de menos de 2 m, seudonimiza con HMAC-SHA512, guarda
+              observaciones y posiciones e incrementa el contador del hexágono
+              más cercano para cada instante.
             </li>
             <li data-i18n-html="uat.arch.li3">
-              <strong>Base de datos geoespacial (PostGIS).</strong> Modelaba
-              edificios, posiciones y puntos de acceso; diseñada a medida para
-              este caso de uso.
+              <strong>Base de datos geoespacial (PostGIS).</strong> Edificios con
+              su polígono, plantas y planos, puntos de acceso, observaciones y la
+              malla hexagonal con sus recuentos; índices espaciales y temporales
+              y migraciones versionadas.
             </li>
             <li data-i18n-html="uat.arch.li4">
-              <strong>Backend (Node.js + Express.js).</strong> API REST con los
-              endpoints y las funciones que consultaban y transformaban los datos
-              para cada capa; pruebas con Jest.
+              <strong>Backend (Node.js + Express + TypeScript).</strong> API REST
+              en varios procesos con caché en memoria, organizada en tres
+              bloques: catálogos (edificios, plantas, malla y mapa de calor),
+              gráficas globales e <em>insights</em>, métricas calculadas como el
+              tiempo de permanencia, la densidad por m², la volatilidad por
+              hexágono, las anomalías de tráfico por punto de acceso (z-score),
+              el comportamiento por sistema operativo y los flujos
+              origen-destino entre edificios. Documentada con OpenAPI.
             </li>
             <li data-i18n-html="uat.arch.li5">
-              <strong>Frontend (Next.js).</strong> El mapa del campus con las
-              capas de visualización (hexágonos, mapa de calor, ocupación por
-              edificio, rutas, detalle por planta y modo histórico) y el módulo
-              de informes.
+              <strong>Frontend (Next.js).</strong> Leaflet sobre OpenStreetMap y
+              D3 para la malla y las rutas; capas de calor, densidad, edificio y
+              rutas, detalle por planta, modo en vivo y modo histórico con
+              reproducción, gráficas con Recharts e informes PDF con jsPDF;
+              adaptado a móvil.
             </li>
             <li data-i18n-html="uat.arch.li6">
-              <strong>Despliegue.</strong> La aplicación se empaquetaba con Docker
-              y se servía tras un proxy inverso nginx.
+              <strong>Despliegue.</strong> Contenedores Docker para frontend,
+              backend y base de datos, servidos bajo subrutas tras un proxy
+              inverso nginx.
             </li>
           </ul>
         </div>
@@ -335,39 +416,40 @@
       <div class="container">
         <h2 class="section-title reveal-left" data-i18n="uat.balance.title">Balance</h2>
         <p class="reveal-left" data-i18n="uat.balance.lead">
-          Es el proyecto en el que más responsabilidad he tenido: partiendo del
-          frontend inicial, saqué adelante el resto en coordinación constante
-          con mi responsable, con quien discutía y validaba las decisiones
-          técnicas de fondo.
+          Es el proyecto en el que más responsabilidad he tenido: partiendo de
+          un prototipo de frontend, construí y llevé a producción el resto de la
+          plataforma, tomando y justificando las decisiones técnicas.
         </p>
 
         <div class="exp-detail-card reveal-left">
           <h3 data-i18n="uat.balance.gains.h3">Qué me llevo</h3>
           <ul>
             <li data-i18n="uat.balance.gains.li1">
-              Haber participado en un proyecto real casi de punta a punta,
-              llevando el grueso del desarrollo: diseño de la base de datos,
-              backend, automatización de la ingesta, evolución del frontend,
-              despliegue con Docker e integración de todas las piezas.
+              Llevar un proyecto real de punta a punta: modelo de datos, ingesta,
+              API, frontend, pruebas, despliegue y optimización con usuarios
+              reales.
             </li>
             <li data-i18n="uat.balance.gains.li2">
-              Tomar decisiones técnicas y saber justificarlas, discutiéndolas
-              con mi responsable: una base de datos geoespacial acorde con el
-              dominio (edificios, posiciones y puntos de acceso), Node.js con
-              Express.js para el backend y n8n para la ingesta, cada una
-              razonada por el problema concreto.
+              Tomar decisiones técnicas y justificarlas por el problema concreto:
+              una base de datos geoespacial para un dominio de edificios,
+              posiciones y polígonos; n8n para una ingesta que había que poder
+              ajustar rápido; Express con TypeScript y pruebas para una API que
+              cambiaba constantemente.
             </li>
             <li data-i18n="uat.balance.gains.li3">
-              Trabajar sobre un producto que cambiaba: el alcance no estaba
-              cerrado, así que me acostumbré a refactorizar backend y base de
-              datos a medida que crecían las funcionalidades y a resolver,
-              junto a mi responsable, los problemas de integración entre
-              frontend y backend.
+              Trabajar con datos reales e imperfectos: la posición por wifi tiene
+              ruido, y métricas como las rutas entre edificios solo dieron
+              resultados creíbles al filtrar ese ruido con umbrales de movimiento
+              y de estancia mínima.
             </li>
             <li data-i18n="uat.balance.gains.li4">
-              Ver toda la cadena de datos, desde una fuente externa hasta la
-              visualización en el mapa, pasando por el tratamiento y el cifrado
-              para preservar el anonimato.
+              Optimizar con criterio: localizar el cuello de botella y atacarlo
+              con índices, caché, agregación en la base de datos y menos
+              peticiones desde el cliente.
+            </li>
+            <li data-i18n="uat.balance.gains.li5">
+              Tratar la privacidad como un requisito de diseño: seudonimización
+              en la ingesta y solo datos agregados en la interfaz.
             </li>
           </ul>
         </div>
@@ -383,6 +465,15 @@
             <li data-i18n="uat.balance.different.li2">
               Fijar antes un contrato estable de endpoints para reducir el
               retrabajo en la integración.
+            </li>
+            <li data-i18n="uat.balance.different.li3">
+              Probar antes con volúmenes de datos y usuarios reales, en lugar de
+              dejar el grueso de la optimización para el final.
+            </li>
+            <li data-i18n="uat.balance.different.li4">
+              Añadir pruebas de las consultas SQL contra una base de datos real,
+              además de las pruebas de controladores con la base de datos
+              simulada.
             </li>
           </ul>
         </div>
