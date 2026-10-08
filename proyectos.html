@@ -62,9 +62,8 @@
         <p class="exp-eyebrow" data-i18n="proy.eyebrow">Proyectos</p>
         <h1 data-i18n="proy.h1">Proyectos</h1>
         <p class="exp-lead" data-i18n="proy.lead">
-          Esta página recoge mis proyectos como una cronología, siguiendo la
-          misma división que mi currículum. Son proyectos que desarrollo por
-          iniciativa personal.
+          Proyectos personales que he desarrollado por mi cuenta, ordenados en
+          el tiempo.
         </p>
       </div>
     </section>
@@ -118,12 +117,13 @@
                   Este mismo sitio web: un portfolio personal multipágina (Sobre
                   mí, Proyectos, Experiencia, Habilidades, Formación y Contacto)
                   construido con HTML, CSS y JavaScript puro, sin frameworks ni
-                  paso de build, y desplegado en GitHub Pages. Nace para dar
-                  contexto al currículum y enseñar con más detalle lo que sé hacer.
+                  paso de build, y desplegado en GitHub Pages. Lo hice para dar
+                  contexto al currículum y enseñar con más detalle lo que sé
+                  hacer.
                 </p>
                 <ul class="exp-points">
                   <li data-i18n="proy.item1.b1">Sitio de nueve páginas en HTML, CSS y JavaScript puro, sin frameworks ni bundler.</li>
-                  <li data-i18n="proy.item1.b2">Bilingüe español/inglés con un diccionario i18n propio en JavaScript; el idioma y el tema elegidos se recuerdan entre visitas con localStorage.</li>
+                  <li data-i18n="proy.item1.b2">Bilingüe (español e inglés) con un diccionario i18n propio en JavaScript. El idioma y el tema elegidos se guardan entre visitas con localStorage.</li>
                   <li data-i18n="proy.item1.b3">Tema claro y oscuro que respeta la preferencia del sistema (prefers-color-scheme).</li>
                   <li data-i18n="proy.item1.b4">Componentes interactivos hechos a mano: carruseles con arrastre táctil, cronologías con buscador y ordenación, y menú responsive.</li>
                   <li data-i18n="proy.item1.b5">Animaciones de aparición al hacer scroll con IntersectionObserver.</li>
@@ -168,13 +168,13 @@
                 </p>
                 <ul class="exp-points">
                   <li data-i18n="proy.item2.b1">Diseñé una arquitectura de 6 microservicios (auth, items, colección, notas, objetivos/canvas, sesiones) en Node.js + Express 5 + TypeScript, cada uno con su responsabilidad y base de datos MySQL compartida (8 tablas).</li>
-                  <li data-i18n="proy.item2.b2">Implementé un API Gateway con nginx como único punto de entrada público; los servicios internos no son accesibles desde fuera de la red Docker, con enrutado por path al frontend y a cada servicio.</li>
+                  <li data-i18n="proy.item2.b2">Implementé un API Gateway con nginx como único punto de entrada público, que enruta por path al frontend y a cada servicio. Los servicios internos no son accesibles desde fuera de la red Docker.</li>
                   <li data-i18n="proy.item2.b3">Autenticación con JWT (tokens de 7 días) sobre cookies secure, hashing con bcrypt, y endurecimiento con helmet, rate limiting y CORS configurable.</li>
                   <li data-i18n="proy.item2.b4">Desarrollé un canvas visual por elemento con la HTML5 Canvas API sin librerías: dibujo libre, formas, imágenes y texto, con arrastre, redimensionado y rotación, historial de deshacer/rehacer y control de capas (z-index).</li>
                   <li data-i18n="proy.item2.b5">Frontend en React 19 + Vite 7 + React Router 7 + TypeScript, con React Compiler, CSS Modules, sistema de i18n propio (es/en) e interfaz con tema claro/oscuro/automático y color de acento configurable.</li>
                   <li data-i18n="proy.item2.b6">Creé utilidades a medida: drag &amp; drop con animaciones FLIP (hook useFlipList), render de Markdown propio, temporizador flotante persistente entre páginas y notificaciones del navegador.</li>
                   <li data-i18n="proy.item2.b7">Panel de estadísticas globales (horas totales, racha de días, gráfico de 7 días), sistema de logros desbloqueables, panel de administración y cuenta demo.</li>
-                  <li data-i18n="proy.item2.b8">Testing con Vitest + Testing Library (frontend) y Jest + Supertest (backend); contenerización completa con Docker Compose separando configuración de producción (frontend compilado servido por nginx) y override de desarrollo (Vite hot-reload).</li>
+                  <li data-i18n="proy.item2.b8">Testing con Vitest + Testing Library (frontend) y Jest + Supertest (backend). Contenerización completa con Docker Compose, separando la configuración de producción (frontend compilado servido por nginx) y un override de desarrollo (Vite hot-reload).</li>
                 </ul>
                 <ul class="exp-tags">
                   <li>React 19</li>

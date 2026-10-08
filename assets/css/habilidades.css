@@ -215,7 +215,9 @@
   color: var(--text);
 }
 
-.skills-note a {
+.skills-note a,
+.skill-applied a,
+.skill-list a {
   color: var(--accent);
   font-weight: 600;
 }

@@ -115,7 +115,7 @@
           <dd data-i18n="uat.context.hours.dd">5 horas diarias, de lunes a viernes (25 h/semana)</dd>
 
           <dt data-i18n="uat.context.mode.dt">Modalidad</dt>
-          <dd data-i18n="uat.context.mode.dd">Presencial hasta comienzos de junio y en remoto el resto del periodo; algo más de la primera mitad del tiempo fue presencial</dd>
+          <dd data-i18n="uat.context.mode.dd">Presencial hasta principios de junio y en remoto el resto del periodo (algo más de la mitad del tiempo fue presencial)</dd>
 
           <dt data-i18n="uat.context.link.dt">Tipo de vínculo</dt>
           <dd data-i18n="uat.context.link.dd">Prácticas de empresa extracurriculares, fuera del horario lectivo, formalizadas a través de la Universidad de Almería</dd>
@@ -266,15 +266,15 @@
               seguridad en los refactors.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li3">
-              <strong>Ingesta de datos.</strong> n8n, para poder montar y ajustar
-              los flujos rápidamente. La red Meraki envía las observaciones a un
-              webhook; el flujo las agrupa por dispositivo, descarta los
-              movimientos de menos de 2 metros, seudonimiza los identificadores
-              con un hash HMAC-SHA512 antes de guardarlos y suma cada observación
-              al hexágono más cercano mediante una búsqueda de vecino más
-              próximo en PostGIS. Otros flujos cargan los catálogos: edificios y
-              plantas, puntos de acceso, la malla de hexágonos y los polígonos
-              de los edificios.
+              <strong>Ingesta de datos.</strong> n8n, para poder montar y
+              ajustar los flujos rápidamente. La red Meraki envía las
+              observaciones a un webhook. El flujo las agrupa por dispositivo,
+              descarta los movimientos de menos de 2 metros, seudonimiza los
+              identificadores con un hash HMAC-SHA512 antes de guardarlos y suma
+              cada observación al hexágono más cercano mediante una búsqueda de
+              vecino más próximo en PostGIS. Otros flujos cargan los catálogos:
+              edificios y plantas, puntos de acceso, la malla de hexágonos y los
+              polígonos de los edificios.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li4">
               <strong>Preparación de datos.</strong> Scripts en Node.js para
@@ -380,10 +380,10 @@
               más cercano para cada instante.
             </li>
             <li data-i18n-html="uat.arch.li3">
-              <strong>Base de datos geoespacial (PostGIS).</strong> Edificios con
-              su polígono, plantas y planos, puntos de acceso, observaciones y la
-              malla hexagonal con sus recuentos; índices espaciales y temporales
-              y migraciones versionadas.
+              <strong>Base de datos geoespacial (PostGIS).</strong> Edificios
+              con su polígono, plantas y planos, puntos de acceso, observaciones
+              y la malla hexagonal con sus recuentos, con índices espaciales y
+              temporales y migraciones versionadas.
             </li>
             <li data-i18n-html="uat.arch.li4">
               <strong>Backend (Node.js + Express + TypeScript).</strong> API REST
@@ -397,10 +397,10 @@
             </li>
             <li data-i18n-html="uat.arch.li5">
               <strong>Frontend (Next.js).</strong> Leaflet sobre OpenStreetMap y
-              D3 para la malla y las rutas; capas de calor, densidad, edificio y
+              D3 para la malla y las rutas. Capas de calor, densidad, edificio y
               rutas, detalle por planta, modo en vivo y modo histórico con
-              reproducción, gráficas con Recharts e informes PDF con jsPDF;
-              adaptado a móvil.
+              reproducción, gráficas con Recharts e informes PDF con jsPDF.
+              Adaptado a móvil.
             </li>
             <li data-i18n-html="uat.arch.li6">
               <strong>Despliegue.</strong> Contenedores Docker para frontend,
@@ -430,11 +430,11 @@
               reales.
             </li>
             <li data-i18n="uat.balance.gains.li2">
-              Tomar decisiones técnicas y justificarlas por el problema concreto:
-              una base de datos geoespacial para un dominio de edificios,
-              posiciones y polígonos; n8n para una ingesta que había que poder
-              ajustar rápido; Express con TypeScript y pruebas para una API que
-              cambiaba constantemente.
+              Tomar decisiones técnicas y justificarlas por el problema
+              concreto. Elegí una base de datos geoespacial porque el dominio
+              eran edificios, posiciones y polígonos, n8n porque la ingesta
+              había que ajustarla rápido, y Express con TypeScript y pruebas
+              porque la API cambiaba constantemente.
             </li>
             <li data-i18n="uat.balance.gains.li3">
               Trabajar con datos reales e imperfectos: la posición por wifi tiene

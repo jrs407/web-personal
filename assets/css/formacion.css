@@ -2,6 +2,7 @@
 
 #titulaciones,
 #tfg,
+#consultoria,
 #solapamiento,
 #certificaciones {
   overflow: hidden;
@@ -157,6 +158,52 @@
 
 .edu-card p:last-child {
   margin-bottom: 0;
+}
+
+.edu-card .edu-tags {
+  margin-bottom: 1rem;
+}
+
+/* Fases numeradas dentro de una tarjeta (proyecto de consultoría) */
+.edu-steps {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.edu-steps li {
+  position: relative;
+  padding-left: 2.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  counter-increment: step;
+}
+
+.edu-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.edu-steps strong {
+  color: var(--text);
+}
+
+.edu-card + .edu-list {
+  margin-top: 1.5rem;
 }
 
 /* Lista explicativa (solapamiento) */
