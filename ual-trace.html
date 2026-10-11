@@ -65,8 +65,9 @@
           que muestra sobre un mapa del campus dónde se concentra la gente a
           partir de los dispositivos conectados a la red wifi, con datos que se
           renuevan cada 2 minutos. Partiendo de un prototipo de frontend que
-          funcionaba con datos simulados, desarrollé el resto de la plataforma:
-          la ingesta de datos, la base de datos geoespacial, la API, la conexión
+          funcionaba con datos simulados, y en coordinación diaria con mi
+          responsable en el grupo, llevé el grueso del desarrollo del resto de
+          la plataforma: la ingesta de datos, la base de datos geoespacial, la API, la conexión
           del frontend con datos reales, nuevas capas de visualización, el
           módulo de informes y el despliegue.
         </p>
@@ -225,12 +226,14 @@
       <div class="container">
         <h2 class="section-title reveal-left" data-i18n="uat.contrib.title">Mi aportación</h2>
         <p class="reveal-left" data-i18n="uat.contrib.lead">
-          Salvo el prototipo inicial del frontend, que heredé, el resto del
-          proyecto lo desarrollé yo: el modelo de datos, la ingesta, el
+          Trabajé dentro del ACG en coordinación diaria con mi responsable en el
+          grupo: las decisiones técnicas las discutíamos y validábamos en común,
+          nos coordinábamos mediante ramas y revisiones de código, y en
+          reuniones frecuentes ajustábamos el alcance. Dentro de ese reparto, y
+          partiendo del prototipo de frontend que heredé de otro desarrollador,
+          llevé el grueso del desarrollo: el modelo de datos, la ingesta, el
           backend, la integración con el frontend, la evolución del propio
-          frontend y el despliegue. Mi responsable en el grupo hacía el
-          seguimiento en reuniones periódicas y con él contrastaba el enfoque de
-          las decisiones importantes.
+          frontend, las pruebas y el despliegue.
         </p>
 
         <div class="exp-detail-card reveal-left">
@@ -242,16 +245,23 @@
             medias, eliminé código muerto y versiones antiguas, y lo seguí
             desarrollando: las capas de densidad, edificio y rutas, el modo
             histórico con reproducción, el módulo de informes y PDF, la
-            adaptación a móvil y muchas optimizaciones de carga. A día de hoy,
-            alrededor del 80 % del código del frontend es mío.
+            adaptación a móvil y muchas optimizaciones de carga. También añadí
+            pruebas del frontend con React Testing Library, que renderizan los
+            componentes y simulan la interacción del usuario para comprobar que
+            la interfaz responde como se espera. A día de hoy, alrededor del
+            80 % del código del frontend es mío.
           </p>
         </div>
 
         <div class="exp-detail-card reveal-left reveal-2">
           <h3 data-i18n="uat.contrib.decisions.h3">Decisiones técnicas</h3>
+          <p data-i18n="uat.contrib.decisions.p">
+            Las propuse a partir del problema concreto y las discutimos y
+            validamos con mi responsable antes de adoptarlas.
+          </p>
           <ul>
             <li data-i18n-html="uat.contrib.decisions.li1">
-              <strong>Base de datos.</strong> Elegí PostgreSQL con PostGIS porque
+              <strong>Base de datos.</strong> Propuse PostgreSQL con PostGIS porque
               el problema es geoespacial: edificios con su polígono real, puntos
               de acceso, posiciones y una malla de hexágonos. Diseñé el modelo
               (12 tablas con borrado lógico e índices espaciales) y lo fui
@@ -337,6 +347,7 @@
               <li>Recharts</li>
               <li>jsPDF</li>
               <li>Tailwind CSS</li>
+              <li>React Testing Library</li>
             </ul>
           </div>
           <div>
@@ -400,7 +411,8 @@
               D3 para la malla y las rutas. Capas de calor, densidad, edificio y
               rutas, detalle por planta, modo en vivo y modo histórico con
               reproducción, gráficas con Recharts e informes PDF con jsPDF.
-              Adaptado a móvil.
+              Adaptado a móvil y con pruebas de componentes con React Testing
+              Library.
             </li>
             <li data-i18n-html="uat.arch.li6">
               <strong>Despliegue.</strong> Contenedores Docker para frontend,
@@ -417,8 +429,10 @@
         <h2 class="section-title reveal-left" data-i18n="uat.balance.title">Balance</h2>
         <p class="reveal-left" data-i18n="uat.balance.lead">
           Es el proyecto en el que más responsabilidad he tenido: partiendo de
-          un prototipo de frontend, construí y llevé a producción el resto de la
-          plataforma, tomando y justificando las decisiones técnicas.
+          un prototipo de frontend y en coordinación constante con mi
+          responsable, llevé el grueso de la plataforma hasta producción,
+          proponiendo las decisiones técnicas y defendiéndolas en nuestras
+          revisiones.
         </p>
 
         <div class="exp-detail-card reveal-left">
@@ -426,12 +440,18 @@
           <ul>
             <li data-i18n="uat.balance.gains.li1">
               Llevar un proyecto real de punta a punta: modelo de datos, ingesta,
-              API, frontend, pruebas, despliegue y optimización con usuarios
-              reales.
+              API, frontend, pruebas de backend y frontend, despliegue y
+              optimización con usuarios reales.
+            </li>
+            <li data-i18n="uat.balance.gains.team">
+              Trabajar en equipo dentro de un grupo de investigación: continuar
+              el código de otro desarrollador, coordinarme a diario con mi
+              responsable mediante ramas y revisiones de código, y ajustar juntos
+              el alcance en reuniones frecuentes.
             </li>
             <li data-i18n="uat.balance.gains.li2">
-              Tomar decisiones técnicas y justificarlas por el problema
-              concreto. Elegí una base de datos geoespacial porque el dominio
+              Proponer decisiones técnicas y justificarlas ante mi responsable
+              por el problema concreto: una base de datos geoespacial porque el dominio
               eran edificios, posiciones y polígonos, n8n porque la ingesta
               había que ajustarla rápido, y Express con TypeScript y pruebas
               porque la API cambiaba constantemente.
