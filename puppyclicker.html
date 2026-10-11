@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="pc.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PuppyClicker · José Carlos Ruiz Sánchez</title>
+  <meta name="description" content="Detalle del proyecto PuppyClicker de José Carlos Ruiz Sánchez: juego de navegador tipo clicker con cuentas de usuario y progreso guardado, con frontend en React 19 y TypeScript, API REST en Node.js/Express, MySQL, autenticación JWT y despliegue con Docker Compose." />
+  <meta name="author" content="José Carlos Ruiz Sánchez" />
+  <meta name="keywords" content="PuppyClicker, juego clicker, React 19, TypeScript, Vite, React Router, Node.js, Express, MySQL, JWT, bcrypt, Docker, Docker Compose, REST, José Carlos Ruiz Sánchez" />
+  <link rel="canonical" href="https://jrs407.github.io/web-personal/puppyclicker.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PuppyClicker · José Carlos Ruiz Sánchez" />
+  <meta property="og:description" content="PuppyClicker: juego de navegador tipo clicker con React 19, Node.js/Express, MySQL, autenticación JWT y Docker Compose." />
+  <meta property="og:url" content="https://jrs407.github.io/web-personal/puppyclicker.html" />
+  <meta property="og:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/puppyclicker.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PuppyClicker · José Carlos Ruiz Sánchez" />
+  <meta name="twitter:description" content="PuppyClicker: juego de navegador tipo clicker con React 19, Node.js/Express, MySQL, autenticación JWT y Docker Compose." />
+  <meta name="twitter:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/puppyclicker.png" />
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/experiencia.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">JC</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="experiencia.html" data-i18n="nav.experience">Experiencia laboral</a></li>
+        <li><a href="habilidades.html" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="formacion.html" data-i18n="nav.education">Formación Académica</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" data-i18n-label="themeToggle" aria-label="Cambiar tema">🌙</button>
+        <button class="language-toggle" id="languageToggle" aria-label="Cambiar idioma">🇬🇧</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-label="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="exp-hero">
+      <div class="container">
+        <p class="exp-eyebrow" data-i18n="pc.eyebrow">Proyectos · Detalle del proyecto</p>
+        <h1 data-i18n="pc.h1">PuppyClicker</h1>
+        <p class="exp-lead" data-i18n="pc.lead">
+          Juego de navegador tipo clicker protagonizado por perros. Cada click
+          suma puntos, y con ellos se compran razas que producen puntos de forma
+          automática y mejoras que multiplican esa producción. Aplicación
+          full-stack con frontend en React 19 y TypeScript, API REST en
+          Node.js/Express sobre MySQL y despliegue con Docker Compose.
+        </p>
+        <ul class="exp-tags exp-hero-tags">
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MySQL</li>
+          <li>Docker</li>
+        </ul>
+        <ul class="exp-detail-toc">
+          <li><a href="#contexto" data-i18n="pc.toc.context">Contexto</a></li>
+          <li><a href="#descripcion" data-i18n="pc.toc.description">Descripción</a></li>
+          <li><a href="#decisiones" data-i18n="pc.toc.decisions">Decisiones técnicas</a></li>
+          <li><a href="#arquitectura" data-i18n="pc.toc.architecture">Arquitectura y stack</a></li>
+          <li><a href="#balance" data-i18n="pc.toc.balance">Balance</a></li>
+        </ul>
+
+        <figure class="exp-hero-media">
+          <button type="button" class="exp-hero-zoom" data-i18n-label="zoom.open" aria-label="Ampliar imagen">
+            <img src="assets/img/Proyecto/puppyclicker.png" data-i18n-alt="pc.hero.imgAlt" alt="Imagen del proyecto PuppyClicker" draggable="false" />
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contexto">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="pc.context.title">Contexto del proyecto</h2>
+
+        <dl class="exp-detail-meta reveal-left">
+          <dt data-i18n="pc.context.type.dt">Tipo</dt>
+          <dd data-i18n="pc.context.type.dd">Proyecto personal</dd>
+
+          <dt data-i18n="pc.context.period.dt">Periodo</dt>
+          <dd data-i18n="pc.context.period.dd">Abril 2025 – Junio 2025</dd>
+
+          <dt data-i18n="pc.context.status.dt">Estado</dt>
+          <dd data-i18n="pc.context.status.dd">Finalizado</dd>
+
+          <dt data-i18n="pc.context.stack.dt">Stack principal</dt>
+          <dd data-i18n="pc.context.stack.dd">React 19 + Node.js/Express + MySQL, con Docker Compose</dd>
+
+          <dt data-i18n="pc.context.code.dt">Código</dt>
+          <dd><a href="https://github.com/jrs407/PuppyClicker" target="_blank" rel="noopener" data-i18n="pc.context.code.dd">github.com/jrs407/PuppyClicker</a></dd>
+        </dl>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="pc.context.origin.h3">Cómo surgió</h3>
+          <p data-i18n="pc.context.origin.p">
+            Surgió de la idea de hacer un juego sencillo de navegador con las
+            tecnologías que ya sabía usar. Tomé como base Cookie Clicker y lo
+            llevé a mi terreno con elementos propios, como los perros. La
+            inspiración es clara y se nota en todo el estilo visual, que
+            personalicé con detalles como el cursor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="descripcion">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="pc.desc.title">Descripción del proyecto</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="pc.desc.what.h3">Qué es</h3>
+          <p data-i18n="pc.desc.what.p">
+            PuppyClicker es un juego incremental de navegador al estilo de
+            Cookie Clicker. El jugador hace click sobre un perro para ganar
+            puntos, y cada click muestra una foto de perro aleatoria y una
+            pequeña animación. Con los puntos compra razas, que generan puntos
+            por segundo de forma automática, y mejoras que duplican los puntos
+            por click o la producción de una raza concreta. El progreso se
+            guarda por cuenta de usuario en la base de datos, y un panel
+            lateral va mostrando curiosidades sobre perros.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="pc.desc.includes.h3">Qué incluye</h3>
+          <ul>
+            <li data-i18n="pc.desc.includes.li1">Mecánicas de juego completas, con 9 razas, del Pug al Shiba, con un precio inicial de 15 a 1.000.000.000 puntos y una producción de 1 a 500.000 puntos por segundo. El precio de cada raza sube un 15 % con cada unidad comprada, y además hay 60 mejoras (6 de click y 6 por raza), cada una de las cuales duplica la producción de su tipo.</li>
+            <li data-i18n="pc.desc.includes.li2">API REST en Node.js + Express 5 + TypeScript con 10 endpoints (registro, inicio de sesión, click, compra de razas y mejoras, sincronización de puntos y listados) sobre MySQL 8 con mysql2 y consultas parametrizadas.</li>
+            <li data-i18n="pc.desc.includes.li3">Modelo relacional de 7 tablas diseñado en MySQL Workbench, con tablas intermedias para las razas y mejoras de cada usuario; un script SQL crea el esquema y carga los datos del juego al arrancar el contenedor de la base de datos.</li>
+            <li data-i18n="pc.desc.includes.li4">Autenticación con JWT (tokens de 12 horas) y contraseñas con bcrypt; las rutas del juego exigen token y toman el usuario del propio token, no de lo que envíe el cliente.</li>
+            <li data-i18n="pc.desc.includes.li5">La lógica de juego se calcula en el servidor. Precios, multiplicador de click y producción por segundo salen del backend, y cada compra se hace dentro de una transacción con bloqueo de fila.</li>
+            <li data-i18n="pc.desc.includes.li6">Frontend en React 19 + TypeScript + Vite + React Router con pantallas de inicio de sesión, registro y juego; fotos aleatorias de la API pública dog.ceo al hacer click (como máximo una petición por segundo), animaciones de click, cursores personalizados e iconos para cada raza y mejora.</li>
+            <li data-i18n="pc.desc.includes.li7">50 curiosidades sobre perros guardadas en la base de datos, que van rotando en pantalla cada 10 segundos.</li>
+            <li data-i18n="pc.desc.includes.li8">Docker Compose con tres servicios (frontend, backend y MySQL) en una red propia, volumen persistente para los datos y recarga en caliente durante el desarrollo.</li>
+            <li data-i18n="pc.desc.includes.li9">Trabajo con Git por ramas de funcionalidad (base de datos, endpoints, lógica de backend, clicker, mejoras…) integradas mediante 8 pull requests.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="decisiones">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="pc.decisions.title">Decisiones técnicas</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="pc.decisions.p">
+            Estas son las decisiones técnicas más relevantes del proyecto y el
+            razonamiento detrás de cada una.
+          </p>
+          <ul>
+            <li data-i18n="pc.decisions.li1">El servidor es la fuente de verdad. El cliente solo indica qué quiere hacer (un click, comprar una raza o una mejora) y el backend calcula precios, multiplicadores y puntos, así que un jugador no puede darse puntos modificando las peticiones desde el navegador.</li>
+            <li data-i18n="pc.decisions.li2">La producción se calcula por tiempo en el servidor. Cada usuario guarda la marca de tiempo de su última liquidación y el backend suma la producción por cada segundo transcurrido. Entre dos liquidaciones se acumulan como máximo 60 segundos, para que una sesión abandonada no genere horas de producción de golpe, y el contador se reinicia al iniciar sesión, de modo que la producción solo corre mientras se juega.</li>
+            <li data-i18n="pc.decisions.li3">Las compras usan transacciones sobre una conexión dedicada con SELECT … FOR UPDATE. Cada compra cobra primero la producción pendiente y bloquea la fila del usuario hasta el COMMIT, de modo que dos compras simultáneas no pueden gastar los mismos puntos.</li>
+            <li data-i18n="pc.decisions.li4">Las contraseñas se migran sin intervención del usuario. Las cuentas con el formato de hash antiguo se verifican con una comparación de tiempo constante y se vuelven a cifrar con bcrypt en su primer inicio de sesión, sin obligar a nadie a cambiar la contraseña.</li>
+            <li data-i18n="pc.decisions.li5">Los datos del juego viven en la base de datos, no en el código. Razas, mejoras, precios y curiosidades están en tablas MySQL, por lo que ajustar el equilibrio del juego solo requiere cambiar el script SQL, sin tocar el frontend.</li>
+            <li data-i18n="pc.decisions.li6">El entorno es reproducible con Docker Compose. El script SQL se monta en el directorio de inicialización de MySQL, así que la base de datos crea el esquema y carga los datos en el primer arranque, y el código se monta como volumen con recarga en caliente en el frontend (Vite) y en el backend (ts-node-dev).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arquitectura">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="pc.arch.title">Arquitectura y stack</h2>
+
+        <div class="exp-detail-tech reveal-left">
+          <div>
+            <h3 data-i18n="pc.arch.frontend.h3">Frontend</h3>
+            <ul class="exp-tags">
+              <li>React 19</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>React Router</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="pc.arch.backend.h3">Backend</h3>
+            <ul class="exp-tags">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>TypeScript</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="pc.arch.infra.h3">Infraestructura</h3>
+            <ul class="exp-tags">
+              <li>Docker</li>
+              <li>Docker Compose</li>
+              <li>JWT</li>
+              <li>bcrypt</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="pc.arch.detail.p">
+            La aplicación se levanta con un único docker-compose up, que arranca
+            tres contenedores conectados por una red Docker propia, y usa además
+            una API externa para las imágenes.
+          </p>
+          <ul>
+            <li data-i18n="pc.arch.detail.li1">El contenedor frontend (puerto 5173) sirve React 19 + Vite, con navegación entre inicio de sesión, registro y juego mediante React Router.</li>
+            <li data-i18n="pc.arch.detail.li2">El contenedor backend (puerto 8080) expone la API en Express 5 con TypeScript bajo /api. Un middleware valida el JWT y deja el usuario autenticado en la petición, y la lógica de producción está centralizada en un módulo que comparten los endpoints de click, sincronización y compra.</li>
+            <li data-i18n="pc.arch.detail.li3">El contenedor db ejecuta MySQL 8 con volumen persistente, y su script de inicialización crea las 7 tablas (Usuario, Edificios, Edificios_has_Usuario, TipoMejora, Mejoras, Usuario_has_Mejoras y Descripciones) y carga los datos del juego.</li>
+            <li data-i18n="pc.arch.detail.li4">Como servicio externo, la API pública dog.ceo proporciona las fotos aleatorias de perros.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="balance">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="pc.balance.title">Balance</h2>
+        <p class="reveal-left" data-i18n="pc.balance.lead">
+          PuppyClicker es un proyecto pequeño y cerrado. Es un juego completo y
+          jugable de principio a fin, con cuentas de usuario, progreso guardado
+          y la lógica de juego en el servidor, que se levanta con un solo
+          comando gracias a Docker Compose.
+        </p>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="pc.balance.review.h3">Revisión posterior</h3>
+          <p data-i18n="pc.balance.review.p">
+            Al preparar el proyecto para este portfolio lo revisé y corregí los
+            fallos de la versión original. El servidor confiaba en el
+            identificador de usuario y en las cantidades de puntos que enviaba el
+            cliente, las contraseñas se guardaban con SHA-256 y una sal fija y
+            aparecían en los logs, y las transacciones se abrían sobre el pool de
+            conexiones, por lo que no garantizaban nada. La corrección añadió
+            autenticación con JWT, bcrypt con migración de las cuentas existentes,
+            el cálculo de puntos en el servidor y transacciones sobre una conexión
+            dedicada.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="pc.balance.different.h3">Qué haría distinto</h3>
+          <p data-i18n="pc.balance.different.p">
+            Aprovecharía para seguir ampliando el juego con nuevas funcionalidades
+            como música, efectos de sonido, eventos aleatorios y un sistema de
+            reinicio de partida.
+          </p>
+        </div>
+
+        <a class="exp-back-link reveal-left" href="proyectos.html" data-i18n="pc.balance.back">&#8249; Volver a Proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-contact">
+        <li data-i18n-html="footer.email">Email: <a href="mailto:josecarlosruizsan@gmail.com">josecarlosruizsan@gmail.com</a></li>
+        <li data-i18n-html="footer.phone">Teléfono: <a href="tel:+34608257574">+34 608257574</a></li>
+        <li>GitHub: <a href="https://github.com/jrs407">github.com/jrs407</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jose-carlos-ruiz-sanchez/">linkedin.com/in/jose-carlos-ruiz-sanchez</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/experiencia.js"></script>
+</body>
+</html>
