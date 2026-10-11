@@ -373,6 +373,18 @@
   margin-bottom: 0;
 }
 
+.exp-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.exp-downloads .btn {
+  white-space: normal;
+  text-align: center;
+}
+
 @media (max-width: 720px) {
   .exp-field--sort {
     flex-basis: 100%;

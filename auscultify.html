@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="au.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auscultify · José Carlos Ruiz Sánchez</title>
+  <meta name="description" content="Detalle de Auscultify, Trabajo de Fin de Grado de José Carlos Ruiz Sánchez calificado con 9,4/10: aplicación web para entrenar la auscultación médica con audios reales, 9 microservicios en Node.js y Python, 11 algoritmos de recomendación con filtrado colaborativo y despliegue con Docker Compose." />
+  <meta name="author" content="José Carlos Ruiz Sánchez" />
+  <meta name="keywords" content="Auscultify, Trabajo de Fin de Grado, TFG, auscultación, sistemas de recomendación, filtrado colaborativo, correlación de Pearson, microservicios, React 19, TypeScript, Node.js, Express, Python, Flask, MySQL, Docker Compose, Chart.js, José Carlos Ruiz Sánchez" />
+  <link rel="canonical" href="https://jrs407.github.io/web-personal/auscultify.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Auscultify · José Carlos Ruiz Sánchez" />
+  <meta property="og:description" content="Auscultify (TFG, 9,4/10): entrenamiento en auscultación médica con audios reales, microservicios en Node.js y Python y 11 algoritmos de recomendación." />
+  <meta property="og:url" content="https://jrs407.github.io/web-personal/auscultify.html" />
+  <meta property="og:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/auscultify.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Auscultify · José Carlos Ruiz Sánchez" />
+  <meta name="twitter:description" content="Auscultify (TFG, 9,4/10): entrenamiento en auscultación médica con audios reales, microservicios en Node.js y Python y 11 algoritmos de recomendación." />
+  <meta name="twitter:image" content="https://jrs407.github.io/web-personal/assets/img/Proyecto/auscultify.png" />
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/experiencia.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">JC</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="experiencia.html" data-i18n="nav.experience">Experiencia laboral</a></li>
+        <li><a href="habilidades.html" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="formacion.html" data-i18n="nav.education">Formación Académica</a></li>
+        <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" data-i18n-label="themeToggle" aria-label="Cambiar tema">🌙</button>
+        <button class="language-toggle" id="languageToggle" aria-label="Cambiar idioma">🇬🇧</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-label="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="exp-hero">
+      <div class="container">
+        <p class="exp-eyebrow" data-i18n="au.eyebrow">Proyectos · Detalle del proyecto</p>
+        <h1 data-i18n="au.h1">Auscultify</h1>
+        <p class="exp-lead" data-i18n="au.lead">
+          Mi Trabajo de Fin de Grado, calificado con un 9,4/10: una aplicación
+          web para que estudiantes de medicina entrenen el reconocimiento de
+          sonidos corporales con audios reales. Combina una arquitectura de
+          microservicios en Node.js y Python, un sistema de recomendación con
+          11 algoritmos que decide qué preguntas proponer en cada sesión y
+          elementos de gamificación y comparación social.
+        </p>
+        <ul class="exp-tags exp-hero-tags">
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>Flask</li>
+          <li>MySQL</li>
+          <li>Docker</li>
+        </ul>
+        <ul class="exp-detail-toc">
+          <li><a href="#contexto" data-i18n="au.toc.context">Contexto</a></li>
+          <li><a href="#descripcion" data-i18n="au.toc.description">Descripción</a></li>
+          <li><a href="#algoritmos" data-i18n="au.toc.algorithms">Algoritmos de recomendación</a></li>
+          <li><a href="#decisiones" data-i18n="au.toc.decisions">Decisiones técnicas</a></li>
+          <li><a href="#arquitectura" data-i18n="au.toc.architecture">Arquitectura y stack</a></li>
+          <li><a href="#documentacion" data-i18n="au.toc.docs">Documentación</a></li>
+          <li><a href="#balance" data-i18n="au.toc.balance">Balance</a></li>
+        </ul>
+
+        <figure class="exp-hero-media">
+          <button type="button" class="exp-hero-zoom" data-i18n-label="zoom.open" aria-label="Ampliar imagen">
+            <img src="assets/img/Proyecto/auscultify.png" data-i18n-alt="au.hero.imgAlt" alt="Pantalla de una pregunta de Auscultify: botón para reproducir el audio y cuatro opciones de respuesta" draggable="false" />
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contexto">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.context.title">Contexto del proyecto</h2>
+
+        <dl class="exp-detail-meta reveal-left">
+          <dt data-i18n="au.context.type.dt">Tipo</dt>
+          <dd data-i18n="au.context.type.dd">Trabajo de Fin de Grado (proyecto individual) · Grado en Ingeniería Informática, Universidad de Almería</dd>
+
+          <dt data-i18n="au.context.period.dt">Periodo</dt>
+          <dd data-i18n="au.context.period.dd">Diciembre 2024 – Enero 2026 · Defendido en febrero de 2026</dd>
+
+          <dt data-i18n="au.context.grade.dt">Calificación</dt>
+          <dd data-i18n="au.context.grade.dd">9,4 / 10</dd>
+
+          <dt data-i18n="au.context.director.dt">Director</dt>
+          <dd>Antonio Jesús Fernández García</dd>
+
+          <dt data-i18n="au.context.status.dt">Estado</dt>
+          <dd data-i18n="au.context.status.dd">Finalizado</dd>
+
+          <dt data-i18n="au.context.stack.dt">Stack principal</dt>
+          <dd data-i18n="au.context.stack.dd">React 19 + 8 microservicios en Node.js/Express + 1 microservicio en Python/Flask, MySQL y Docker Compose</dd>
+
+          <dt data-i18n="au.context.code.dt">Código</dt>
+          <dd><a href="https://github.com/jrs407/Auscultify" target="_blank" rel="noopener" data-i18n="au.context.code.dd">github.com/jrs407/Auscultify</a></dd>
+
+          <dt data-i18n="au.context.docs.dt">Memorias</dt>
+          <dd><a href="#documentacion" data-i18n="au.context.docs.dd">Descargar TFG y Complemento (PDF)</a></dd>
+        </dl>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.context.origin.h3">Cómo surgió</h3>
+          <p data-i18n="au.context.origin.p">
+            La auscultación es una de las habilidades básicas de un médico, pero
+            se suele entrenar en prácticas clínicas, con pacientes reales, así
+            que un estudiante no tiene una forma cómoda de practicarla por su
+            cuenta. Lo contrasté con profesionales sanitarios y con estudiantes
+            de medicina, y de ahí salió la idea: practicar con audios reales ya
+            grabados, en sesiones cortas, con un sistema que decide qué
+            preguntas proponer según cómo avanza cada estudiante.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="au.context.parts.h3">TFG y Complemento</h3>
+          <p data-i18n="au.context.parts.p">
+            En la Universidad de Almería el Trabajo de Fin de Grado se entrega
+            en dos documentos. La memoria del TFG cubre la aplicación: análisis,
+            requisitos, diseño, arquitectura de microservicios, frontend y
+            backend. El Complemento del TFG se centra en el sistema de
+            recomendación: el fundamento teórico, la definición de los 11
+            algoritmos y su formalización matemática. Defendí ambos ante
+            tribunal en la convocatoria de febrero de 2026.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="descripcion">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.desc.title">Descripción del proyecto</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="au.desc.what.h3">Qué es</h3>
+          <p data-i18n="au.desc.what.p">
+            Auscultify es una aplicación web para entrenar el oído en la
+            auscultación. Cada sesión tiene 10 preguntas tipo test: se reproduce
+            un audio real (cardiaco, pulmonar o abdominal) y hay que elegir qué
+            es entre cuatro opciones. El estudiante elige con qué criterio se
+            seleccionan las preguntas, sigue su progreso con estadísticas y
+            gráficas, y puede seguir a otros usuarios y compararse con ellos.
+            Un administrador mantiene el banco de preguntas subiendo audios y
+            creando categorías desde la propia aplicación.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.desc.includes.h3">Qué incluye</h3>
+          <ul>
+            <li data-i18n="au.desc.includes.li1">Sesiones de 10 preguntas con cuatro opciones: la respuesta correcta y tres distractores tomados, siempre que se puede, de la misma categoría. Se puede volver a escuchar el audio o saltar la pregunta, y al terminar se muestra el resultado de la sesión.</li>
+            <li data-i18n="au.desc.includes.li2">11 algoritmos de recomendación en Python para elegir las preguntas, desde el aleatorio simple hasta el filtrado colaborativo basado en usuarios y en preguntas. Si un algoritmo personalizado no tiene datos suficientes, la sesión arranca con el aleatorio para que nunca quede bloqueada.</li>
+            <li data-i18n="au.desc.includes.li3">Estadísticas individuales: preguntas respondidas, acertadas y falladas, racha de días, promedio general, mejor y peor categoría y una gráfica de los últimos 7 días con Chart.js.</li>
+            <li data-i18n="au.desc.includes.li4">Componente social: perfiles públicos o privados, buscador de usuarios públicos, seguir y dejar de seguir, y una comparativa de estadísticas con cada usuario seguido.</li>
+            <li data-i18n="au.desc.includes.li5">Gestión del perfil: cambio de correo y contraseña, visibilidad del perfil y eliminación de la cuenta con confirmación.</li>
+            <li data-i18n="au.desc.includes.li6">Panel de administración para subir audios con su respuesta y crear o eliminar categorías y preguntas. Cada cambio se refleja a la vez en la base de datos y en la carpeta de audios del repositorio.</li>
+            <li data-i18n="au.desc.includes.li7">9 microservicios, el frontend y MySQL orquestados con Docker Compose, de modo que la aplicación entera se levanta con un solo comando. Las contraseñas se guardan cifradas con bcrypt.</li>
+            <li data-i18n="au.desc.includes.li8">Análisis y diseño previos: 27 requisitos funcionales y 3 no funcionales, diagrama de casos de uso, modelo de base de datos y prototipos de todas las pantallas en Figma; planificación con diagramas de Gantt en Microsoft Project y memorias escritas en LaTeX.</li>
+          </ul>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="au.desc.beyond.h3">Más allá de la medicina</h3>
+          <p data-i18n="au.desc.beyond.p">
+            Aunque está pensada para la auscultación, nada en el código está
+            atado al dominio médico: una pregunta es un audio con su respuesta
+            correcta, agrupado en categorías que crea el administrador. La misma
+            aplicación sirve para reconocer acordes o instrumentos, cantos de
+            aves, pronunciaciones de un idioma o averías por el sonido de una
+            máquina, y los algoritmos, las estadísticas y la parte social
+            funcionan igual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="algoritmos">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.algo.title">Algoritmos de recomendación</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="au.algo.p">
+            El sistema de recomendación es el núcleo del Complemento del TFG.
+            En vez de un único algoritmo implementé 11, por dos motivos: los
+            métodos sencillos funcionan con usuarios nuevos sin historial
+            (arranque en frío), y tener varios criterios permite elegir entre
+            reforzar errores, consolidar aciertos o aprovechar lo que hacen
+            otros estudiantes. Todos devuelven la sesión con el mismo formato,
+            así que el frontend no depende del algoritmo elegido.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.algo.base.h3">Métodos base</h3>
+          <ul>
+            <li data-i18n="au.algo.base.li1">Aleatorio simple: preguntas al azar, sin usar ningún historial. Sirve de referencia y para usuarios nuevos.</li>
+            <li data-i18n="au.algo.base.li2">Preguntas que no has hecho: prioriza las que el usuario nunca ha respondido y, cuando no quedan, las que llevan más tiempo sin hacerse. Al proponerlas actualiza su fecha, para que el repaso vaya rotando y no salgan siempre las mismas.</li>
+            <li data-i18n="au.algo.base.li3">Categoría concreta: preguntas al azar dentro de la categoría que elige el usuario.</li>
+          </ul>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.algo.perf.h3">Según el rendimiento del usuario</h3>
+          <ul>
+            <li data-i18n="au.algo.perf.li1">Categoría que peor se te da y categoría que mejor se te da: calculan el porcentaje de acierto del usuario en cada categoría, descartan las que tienen pocos intentos para no decidir con muestras pequeñas y construyen la sesión dentro de la peor o la mejor.</li>
+            <li data-i18n="au.algo.perf.li2">Preguntas que tiendes a fallar y preguntas que tiendes a acertar: ordenan el historial pregunta a pregunta por proporción de fallos (o de aciertos), después por número total y por antigüedad, y eligen con una selección ponderada. Las preguntas con más peso tienen más probabilidad de salir, pero dos sesiones seguidas no son idénticas.</li>
+          </ul>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="au.algo.user.h3">Filtrado colaborativo basado en usuarios</h3>
+          <p data-i18n="au.algo.user.p">
+            Preguntas que otros usuarios similares fallan y que aciertan. Cada
+            usuario se representa como un vector de aciertos y fallos (1 y 0)
+            sobre las preguntas que ha respondido, y la similitud entre dos
+            usuarios se calcula con la correlación de Pearson sobre las
+            preguntas que tienen en común. Solo cuentan los usuarios con
+            similitud positiva y un mínimo de preguntas compartidas. Con los
+            más parecidos se forma un vecindario y se recomiendan preguntas que
+            el usuario aún no ha hecho y que en ese vecindario tienen una tasa
+            alta de fallo (o de acierto).
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-3">
+          <h3 data-i18n="au.algo.item.h3">Filtrado colaborativo basado en ítems</h3>
+          <p data-i18n="au.algo.item.p">
+            Preguntas similares que se fallan y que se aciertan. Aquí se
+            comparan preguntas en lugar de personas: dos preguntas se parecen
+            si los mismos usuarios tienden a fallarlas (o acertarlas) juntas,
+            medido otra vez con Pearson sobre los usuarios que han respondido
+            ambas, con un mínimo de tres. Partiendo de las preguntas que el
+            usuario ha fallado (o acertado), cada pregunta nueva recibe como
+            puntuación su máxima similitud con alguna de ellas; se descartan
+            las que no superan un umbral de 0,1 y se proponen las de mayor
+            puntuación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="decisiones">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.decisions.title">Decisiones técnicas</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="au.decisions.p">
+            Estas son las decisiones técnicas más relevantes del proyecto y el
+            razonamiento detrás de cada una.
+          </p>
+          <ul>
+            <li data-i18n="au.decisions.li1">Microservicios con el lenguaje adecuado para cada parte. Los servicios de negocio están en Node.js + Express + TypeScript y los algoritmos en Python + Flask, más cómodo para lógica algorítmica. Cada servicio tiene una única responsabilidad y su propio Dockerfile, así que se puede modificar o añadir uno sin tocar el resto.</li>
+            <li data-i18n="au.decisions.li2">Docker Compose en lugar de Kubernetes. Para el alcance del proyecto prioricé la sencillez operativa y la rapidez de despliegue frente a la orquestación de un clúster.</li>
+            <li data-i18n="au.decisions.li3">Algoritmos clásicos en lugar de un agente de IA. El primer prototipo tenía un cuadro de texto donde un agente de IA elegiría las preguntas. Lo sustituí por algoritmos de recomendación clásicos porque dan un criterio objetivo, explicable y evaluable, y pueden funcionar sin depender de un servicio externo.</li>
+            <li data-i18n="au.decisions.li4">Historial completo de respuestas. Cada respuesta se guarda como una fila propia con su fecha y su resultado, en lugar de un contador por pregunta, para no perder información cuando se repite una pregunta. Ese historial es la base de todos los algoritmos personalizados y de las estadísticas.</li>
+            <li data-i18n="au.decisions.li5">Los criterios de recomendación viven en la base de datos. La lista de algoritmos y su descripción, que la pantalla de inicio muestra al pasar el cursor, se lee de una tabla, no está escrita en el frontend.</li>
+            <li data-i18n="au.decisions.li6">El banco de preguntas viaja con el repositorio. Las categorías y los audios se describen en dos ficheros de texto junto a los audios; al arrancar, un microservicio crea el administrador y vuelca en la base de datos lo que falte, de modo que quien clone el repositorio tiene el mismo banco de preguntas.</li>
+            <li data-i18n="au.decisions.li7">Gamificación y comparación social como decisión de producto. Sesiones cortas de 10 preguntas para repasar en un rato libre, racha de días y comparativa con amigos, apoyadas en estudios sobre motivación que cito en la memoria.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="arquitectura">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.arch.title">Arquitectura y stack</h2>
+
+        <div class="exp-detail-tech reveal-left">
+          <div>
+            <h3 data-i18n="au.arch.frontend.h3">Frontend</h3>
+            <ul class="exp-tags">
+              <li>React 19</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>React Router</li>
+              <li>Chart.js</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="au.arch.backend.h3">Backend</h3>
+            <ul class="exp-tags">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>TypeScript</li>
+              <li>Python</li>
+              <li>Flask</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="au.arch.infra.h3">Datos e infraestructura</h3>
+            <ul class="exp-tags">
+              <li>MySQL</li>
+              <li>Docker</li>
+              <li>Docker Compose</li>
+              <li>bcrypt</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-detail-card reveal-left">
+          <p data-i18n="au.arch.detail.p">
+            La aplicación se levanta con un único docker compose up, que arranca
+            once contenedores: el frontend, la base de datos y nueve
+            microservicios, cada uno con su API REST y su puerto.
+          </p>
+          <ul>
+            <li data-i18n="au.arch.detail.li1">El frontend (puerto 5173) es una aplicación React 19 + Vite con una vista por pantalla y un menú lateral compartido, que llama directamente a cada microservicio.</li>
+            <li data-i18n="au.arch.detail.li2">Ocho microservicios en Node.js + Express + TypeScript: sincronización de datos, autenticación, perfil, seguidores, categorías, preguntas (con subida de audio), listado de algoritmos y respuestas y estadísticas del usuario.</li>
+            <li data-i18n="au.arch.detail.li3">Un microservicio en Python + Flask (puerto 3014) expone un endpoint por algoritmo; cada algoritmo es una clase en su propio fichero, así que se pueden añadir o cambiar sin afectar a los demás.</li>
+            <li data-i18n="au.arch.detail.li4">MySQL 8 con un script de inicialización que crea las 6 tablas (Usuarios, Categorias, Preguntas, Usuarios_has_Preguntas, Usuarios_Seguidores y CriterioAlgoritmo) y carga los criterios de los algoritmos.</li>
+            <li data-i18n="au.arch.detail.li5">La carpeta de audios se monta como volumen en los servicios que la necesitan, para que los audios subidos desde el panel de administración queden guardados en el propio repositorio.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="documentacion">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.docs.title">Documentación</h2>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="au.docs.tfg.h3">Memoria del Trabajo de Fin de Grado</h3>
+          <p data-i18n="au.docs.tfg.p">
+            Desarrollo de una aplicación basada en microservicios para el
+            entrenamiento en auscultación médica. Incluye la planificación, los
+            requisitos, los diagramas de casos de uso y de base de datos, los
+            prototipos en Figma y la implementación del frontend y de cada
+            microservicio.
+          </p>
+          <div class="exp-downloads">
+            <a class="btn btn-primary" href="assets/TFG%20y%20CTFG/TFG_Jose_Carlos_Ruiz_Sanchez-1.pdf" download data-i18n="au.docs.tfg.cta">Descargar TFG (PDF, 4,8 MB)</a>
+          </div>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.docs.ctfg.h3">Complemento del Trabajo de Fin de Grado</h3>
+          <p data-i18n="au.docs.ctfg.p">
+            Personalización de sesiones de entrenamiento en auscultación
+            mediante sistemas de recomendación. Explica el fundamento de los
+            sistemas de recomendación, define los 11 algoritmos y formaliza el
+            cálculo de similitud entre usuarios y entre preguntas.
+          </p>
+          <div class="exp-downloads">
+            <a class="btn btn-primary" href="assets/TFG%20y%20CTFG/CTFG_Jose_Carlos_Ruiz_Sanchez-1.pdf" download data-i18n="au.docs.ctfg.cta">Descargar Complemento (PDF, 1,7 MB)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="balance">
+      <div class="container">
+        <h2 class="section-title reveal-left" data-i18n="au.balance.title">Balance</h2>
+        <p class="reveal-left" data-i18n="au.balance.lead">
+          Auscultify cierra el Grado: una aplicación funcional de principio a
+          fin, con análisis, diseño, implementación, documentación y defensa
+          ante tribunal, calificada con un 9,4. Me sirvió para afianzar el
+          desarrollo con microservicios y para entender en la práctica cómo
+          influyen los datos de uso en la calidad de una recomendación.
+        </p>
+
+        <div class="exp-detail-card reveal-left">
+          <h3 data-i18n="au.balance.review.h3">Revisión posterior</h3>
+          <p data-i18n="au.balance.review.p">
+            Al preparar el proyecto para este portfolio lo revisé y corregí
+            varios fallos de la versión entregada. La sincronización inicial
+            solo cargaba el administrador y las categorías, así que al clonar el
+            repositorio el banco de preguntas aparecía vacío; ahora cada audio
+            se registra con su respuesta y la sincronización vuelca también las
+            preguntas, sin duplicar nada al reiniciar. Además, los servicios
+            esperan a que MySQL esté listo antes de arrancar, eliminar una
+            categoría limpia también las rutas de sus audios, quité del
+            repositorio las categorías de prueba y añadí un README en español e
+            inglés con las instrucciones para montarlo.
+          </p>
+        </div>
+
+        <div class="exp-detail-card reveal-left reveal-2">
+          <h3 data-i18n="au.balance.different.h3">Qué haría distinto</h3>
+          <ul>
+            <li data-i18n="au.balance.different.li1">Pondría un API Gateway como único punto de entrada y aplicaría autenticación con JWT en todos los microservicios, en lugar de que el frontend llame a cada servicio por su puerto.</li>
+            <li data-i18n="au.balance.different.li2">Mediría qué algoritmo funciona mejor: si el estudiante mejora con el tiempo en cada categoría y si retiene lo aprendido tras días sin practicar, para justificar con datos qué estrategia usar en cada caso.</li>
+            <li data-i18n="au.balance.different.li3">Combinaría criterios dentro de una misma sesión, por ejemplo preguntas nuevas con preguntas de refuerzo, para equilibrar exploración, consolidación y corrección de errores.</li>
+            <li data-i18n="au.balance.different.li4">La desplegaría en la nube, la haría responsive para usarla desde el móvil y ampliaría el modelo de preguntas para admitir imágenes, como radiografías o electrocardiogramas.</li>
+          </ul>
+        </div>
+
+        <a class="exp-back-link reveal-left" href="proyectos.html" data-i18n="au.balance.back">&#8249; Volver a Proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-contact">
+        <li data-i18n-html="footer.email">Email: <a href="mailto:josecarlosruizsan@gmail.com">josecarlosruizsan@gmail.com</a></li>
+        <li data-i18n-html="footer.phone">Teléfono: <a href="tel:+34608257574">+34 608257574</a></li>
+        <li>GitHub: <a href="https://github.com/jrs407">github.com/jrs407</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jose-carlos-ruiz-sanchez/">linkedin.com/in/jose-carlos-ruiz-sanchez</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/experiencia.js"></script>
+</body>
+</html>
