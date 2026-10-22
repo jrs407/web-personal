@@ -61,12 +61,12 @@
         <p class="exp-eyebrow" data-i18n="au.eyebrow">Proyectos · Detalle del proyecto</p>
         <h1 data-i18n="au.h1">Auscultify</h1>
         <p class="exp-lead" data-i18n="au.lead">
-          Mi Trabajo de Fin de Grado, calificado con un 9,4/10: una aplicación
-          web para que estudiantes de medicina entrenen el reconocimiento de
-          sonidos corporales con audios reales. Combina una arquitectura de
-          microservicios en Node.js y Python, un sistema de recomendación con
-          11 algoritmos que decide qué preguntas proponer en cada sesión y
-          elementos de gamificación y comparación social.
+          Mi Trabajo de Fin de Grado, calificado con un 9,4/10, es una
+          aplicación web para que estudiantes de medicina entrenen el
+          reconocimiento de sonidos corporales con audios reales. Combina una
+          arquitectura de microservicios en Node.js y Python, un sistema de
+          recomendación con 11 algoritmos que decide qué preguntas proponer en
+          cada sesión y elementos de gamificación y comparación social.
         </p>
         <ul class="exp-tags exp-hero-tags">
           <li>React 19</li>
@@ -89,7 +89,7 @@
 
         <figure class="exp-hero-media">
           <button type="button" class="exp-hero-zoom" data-i18n-label="zoom.open" aria-label="Ampliar imagen">
-            <img src="assets/img/Proyecto/auscultify.png" data-i18n-alt="au.hero.imgAlt" alt="Pantalla de una pregunta de Auscultify: botón para reproducir el audio y cuatro opciones de respuesta" draggable="false" />
+            <img src="assets/img/Proyecto/auscultify.png" data-i18n-alt="au.hero.imgAlt" alt="Pantalla de una pregunta de Auscultify, con un botón para reproducir el audio y cuatro opciones de respuesta" draggable="false" />
           </button>
         </figure>
       </div>
@@ -132,8 +132,8 @@
             se suele entrenar en prácticas clínicas, con pacientes reales, así
             que un estudiante no tiene una forma cómoda de practicarla por su
             cuenta. Lo contrasté con profesionales sanitarios y con estudiantes
-            de medicina, y de ahí salió la idea: practicar con audios reales ya
-            grabados, en sesiones cortas, con un sistema que decide qué
+            de medicina, y de ahí salió la idea de practicar con audios reales
+            ya grabados, en sesiones cortas, con un sistema que decide qué
             preguntas proponer según cómo avanza cada estudiante.
           </p>
         </div>
@@ -142,12 +142,12 @@
           <h3 data-i18n="au.context.parts.h3">TFG y Complemento</h3>
           <p data-i18n="au.context.parts.p">
             En la Universidad de Almería el Trabajo de Fin de Grado se entrega
-            en dos documentos. La memoria del TFG cubre la aplicación: análisis,
-            requisitos, diseño, arquitectura de microservicios, frontend y
-            backend. El Complemento del TFG se centra en el sistema de
-            recomendación: el fundamento teórico, la definición de los 11
-            algoritmos y su formalización matemática. Defendí ambos ante
-            tribunal en la convocatoria de febrero de 2026.
+            en dos documentos. La memoria del TFG cubre la aplicación, con el
+            análisis, los requisitos, el diseño, la arquitectura de
+            microservicios, el frontend y el backend. El Complemento del TFG se
+            centra en el sistema de recomendación, con el fundamento teórico, la
+            definición de los 11 algoritmos y su formalización matemática.
+            Defendí ambos ante tribunal en la convocatoria de febrero de 2026.
           </p>
         </div>
       </div>
@@ -161,27 +161,28 @@
           <h3 data-i18n="au.desc.what.h3">Qué es</h3>
           <p data-i18n="au.desc.what.p">
             Auscultify es una aplicación web para entrenar el oído en la
-            auscultación. Cada sesión tiene 10 preguntas tipo test: se reproduce
-            un audio real (cardiaco, pulmonar o abdominal) y hay que elegir qué
-            es entre cuatro opciones. El estudiante elige con qué criterio se
-            seleccionan las preguntas, sigue su progreso con estadísticas y
-            gráficas, y puede seguir a otros usuarios y compararse con ellos.
-            Un administrador mantiene el banco de preguntas subiendo audios y
-            creando categorías desde la propia aplicación.
+            auscultación. Cada sesión tiene 10 preguntas tipo test. En cada una
+            se reproduce un audio real (cardiaco, pulmonar o abdominal) y hay
+            que elegir qué es entre cuatro opciones. El estudiante elige con qué
+            criterio se seleccionan las preguntas, sigue su progreso con
+            estadísticas y gráficas, y puede seguir a otros usuarios y
+            compararse con ellos. Un administrador mantiene el banco de
+            preguntas subiendo audios y creando categorías desde la propia
+            aplicación.
           </p>
         </div>
 
         <div class="exp-detail-card reveal-left reveal-2">
           <h3 data-i18n="au.desc.includes.h3">Qué incluye</h3>
           <ul>
-            <li data-i18n="au.desc.includes.li1">Sesiones de 10 preguntas con cuatro opciones: la respuesta correcta y tres distractores tomados, siempre que se puede, de la misma categoría. Se puede volver a escuchar el audio o saltar la pregunta, y al terminar se muestra el resultado de la sesión.</li>
+            <li data-i18n="au.desc.includes.li1">Sesiones de 10 preguntas con cuatro opciones, que son la respuesta correcta y tres distractores tomados, siempre que se puede, de la misma categoría. Se puede volver a escuchar el audio o saltar la pregunta, y al terminar se muestra el resultado de la sesión.</li>
             <li data-i18n="au.desc.includes.li2">11 algoritmos de recomendación en Python para elegir las preguntas, desde el aleatorio simple hasta el filtrado colaborativo basado en usuarios y en preguntas. Si un algoritmo personalizado no tiene datos suficientes, la sesión arranca con el aleatorio para que nunca quede bloqueada.</li>
-            <li data-i18n="au.desc.includes.li3">Estadísticas individuales: preguntas respondidas, acertadas y falladas, racha de días, promedio general, mejor y peor categoría y una gráfica de los últimos 7 días con Chart.js.</li>
-            <li data-i18n="au.desc.includes.li4">Componente social: perfiles públicos o privados, buscador de usuarios públicos, seguir y dejar de seguir, y una comparativa de estadísticas con cada usuario seguido.</li>
-            <li data-i18n="au.desc.includes.li5">Gestión del perfil: cambio de correo y contraseña, visibilidad del perfil y eliminación de la cuenta con confirmación.</li>
+            <li data-i18n="au.desc.includes.li3">Estadísticas individuales con preguntas respondidas, acertadas y falladas, racha de días, promedio general, mejor y peor categoría y una gráfica de los últimos 7 días con Chart.js.</li>
+            <li data-i18n="au.desc.includes.li4">Componente social con perfiles públicos o privados, buscador de usuarios públicos, opción de seguir y dejar de seguir y una comparativa de estadísticas con cada usuario seguido.</li>
+            <li data-i18n="au.desc.includes.li5">Gestión del perfil, con cambio de correo y contraseña, visibilidad del perfil y eliminación de la cuenta con confirmación.</li>
             <li data-i18n="au.desc.includes.li6">Panel de administración para subir audios con su respuesta y crear o eliminar categorías y preguntas. Cada cambio se refleja a la vez en la base de datos y en la carpeta de audios del repositorio.</li>
             <li data-i18n="au.desc.includes.li7">9 microservicios, el frontend y MySQL orquestados con Docker Compose, de modo que la aplicación entera se levanta con un solo comando. Las contraseñas se guardan cifradas con bcrypt.</li>
-            <li data-i18n="au.desc.includes.li8">Análisis y diseño previos: 27 requisitos funcionales y 3 no funcionales, diagrama de casos de uso, modelo de base de datos y prototipos de todas las pantallas en Figma; planificación con diagramas de Gantt en Microsoft Project y memorias escritas en LaTeX.</li>
+            <li data-i18n="au.desc.includes.li8">Análisis y diseño previos, con 27 requisitos funcionales y 3 no funcionales, diagrama de casos de uso, modelo de base de datos y prototipos de todas las pantallas en Figma. La planificación se hizo con diagramas de Gantt en Microsoft Project y las memorias se escribieron en LaTeX.</li>
           </ul>
         </div>
 
@@ -189,7 +190,7 @@
           <h3 data-i18n="au.desc.beyond.h3">Más allá de la medicina</h3>
           <p data-i18n="au.desc.beyond.p">
             Aunque está pensada para la auscultación, nada en el código está
-            atado al dominio médico: una pregunta es un audio con su respuesta
+            atado al dominio médico. Una pregunta es un audio con su respuesta
             correcta, agrupado en categorías que crea el administrador. La misma
             aplicación sirve para reconocer acordes o instrumentos, cantos de
             aves, pronunciaciones de un idioma o averías por el sonido de una
@@ -206,8 +207,8 @@
 
         <div class="exp-detail-card reveal-left">
           <p data-i18n="au.algo.p">
-            El sistema de recomendación es el núcleo del Complemento del TFG.
-            En vez de un único algoritmo implementé 11, por dos motivos: los
+            El sistema de recomendación es el núcleo del Complemento del TFG. En
+            vez de un único algoritmo implementé 11, por dos motivos. Los
             métodos sencillos funcionan con usuarios nuevos sin historial
             (arranque en frío), y tener varios criterios permite elegir entre
             reforzar errores, consolidar aciertos o aprovechar lo que hacen
@@ -252,14 +253,14 @@
           <h3 data-i18n="au.algo.item.h3">Filtrado colaborativo basado en ítems</h3>
           <p data-i18n="au.algo.item.p">
             Preguntas similares que se fallan y que se aciertan. Aquí se
-            comparan preguntas en lugar de personas: dos preguntas se parecen
-            si los mismos usuarios tienden a fallarlas (o acertarlas) juntas,
+            comparan preguntas en lugar de personas. Dos preguntas se parecen si
+            los mismos usuarios tienden a fallarlas (o acertarlas) juntas,
             medido otra vez con Pearson sobre los usuarios que han respondido
             ambas, con un mínimo de tres. Partiendo de las preguntas que el
             usuario ha fallado (o acertado), cada pregunta nueva recibe como
-            puntuación su máxima similitud con alguna de ellas; se descartan
-            las que no superan un umbral de 0,1 y se proponen las de mayor
-            puntuación.
+            puntuación su máxima similitud con alguna de ellas. Después se
+            descartan las que no superan un umbral de 0,1 y se proponen las de
+            mayor puntuación.
           </p>
         </div>
       </div>
@@ -280,7 +281,7 @@
             <li data-i18n="au.decisions.li3">Algoritmos clásicos en lugar de un agente de IA. El primer prototipo tenía un cuadro de texto donde un agente de IA elegiría las preguntas. Lo sustituí por algoritmos de recomendación clásicos porque dan un criterio objetivo, explicable y evaluable, y pueden funcionar sin depender de un servicio externo.</li>
             <li data-i18n="au.decisions.li4">Historial completo de respuestas. Cada respuesta se guarda como una fila propia con su fecha y su resultado, en lugar de un contador por pregunta, para no perder información cuando se repite una pregunta. Ese historial es la base de todos los algoritmos personalizados y de las estadísticas.</li>
             <li data-i18n="au.decisions.li5">Los criterios de recomendación viven en la base de datos. La lista de algoritmos y su descripción, que la pantalla de inicio muestra al pasar el cursor, se lee de una tabla, no está escrita en el frontend.</li>
-            <li data-i18n="au.decisions.li6">El banco de preguntas viaja con el repositorio. Las categorías y los audios se describen en dos ficheros de texto junto a los audios; al arrancar, un microservicio crea el administrador y vuelca en la base de datos lo que falte, de modo que quien clone el repositorio tiene el mismo banco de preguntas.</li>
+            <li data-i18n="au.decisions.li6">El banco de preguntas viaja con el repositorio. Las categorías y los audios se describen en dos ficheros de texto junto a los audios. Al arrancar, un microservicio crea el administrador y vuelca en la base de datos lo que falte, de modo que quien clone el repositorio tiene el mismo banco de preguntas.</li>
             <li data-i18n="au.decisions.li7">Gamificación y comparación social como decisión de producto. Sesiones cortas de 10 preguntas para repasar en un rato libre, racha de días y comparativa con amigos, apoyadas en estudios sobre motivación que cito en la memoria.</li>
           </ul>
         </div>
@@ -326,13 +327,13 @@
         <div class="exp-detail-card reveal-left">
           <p data-i18n="au.arch.detail.p">
             La aplicación se levanta con un único docker compose up, que arranca
-            once contenedores: el frontend, la base de datos y nueve
+            once contenedores. Son el frontend, la base de datos y nueve
             microservicios, cada uno con su API REST y su puerto.
           </p>
           <ul>
             <li data-i18n="au.arch.detail.li1">El frontend (puerto 5173) es una aplicación React 19 + Vite con una vista por pantalla y un menú lateral compartido, que llama directamente a cada microservicio.</li>
-            <li data-i18n="au.arch.detail.li2">Ocho microservicios en Node.js + Express + TypeScript: sincronización de datos, autenticación, perfil, seguidores, categorías, preguntas (con subida de audio), listado de algoritmos y respuestas y estadísticas del usuario.</li>
-            <li data-i18n="au.arch.detail.li3">Un microservicio en Python + Flask (puerto 3014) expone un endpoint por algoritmo; cada algoritmo es una clase en su propio fichero, así que se pueden añadir o cambiar sin afectar a los demás.</li>
+            <li data-i18n="au.arch.detail.li2">Ocho microservicios en Node.js + Express + TypeScript para sincronización de datos, autenticación, perfil, seguidores, categorías, preguntas (con subida de audio), listado de algoritmos y respuestas y estadísticas del usuario.</li>
+            <li data-i18n="au.arch.detail.li3">Un microservicio en Python + Flask (puerto 3014) expone un endpoint por algoritmo. Cada algoritmo es una clase en su propio fichero, así que se pueden añadir o cambiar sin afectar a los demás.</li>
             <li data-i18n="au.arch.detail.li4">MySQL 8 con un script de inicialización que crea las 6 tablas (Usuarios, Categorias, Preguntas, Usuarios_has_Preguntas, Usuarios_Seguidores y CriterioAlgoritmo) y carga los criterios de los algoritmos.</li>
             <li data-i18n="au.arch.detail.li5">La carpeta de audios se monta como volumen en los servicios que la necesitan, para que los audios subidos desde el panel de administración queden guardados en el propio repositorio.</li>
           </ul>
@@ -377,7 +378,7 @@
       <div class="container">
         <h2 class="section-title reveal-left" data-i18n="au.balance.title">Balance</h2>
         <p class="reveal-left" data-i18n="au.balance.lead">
-          Auscultify cierra el Grado: una aplicación funcional de principio a
+          Auscultify cierra el Grado. Es una aplicación funcional de principio a
           fin, con análisis, diseño, implementación, documentación y defensa
           ante tribunal, calificada con un 9,4. Me sirvió para afianzar el
           desarrollo con microservicios y para entender en la práctica cómo
@@ -390,7 +391,7 @@
             Al preparar el proyecto para este portfolio lo revisé y corregí
             varios fallos de la versión entregada. La sincronización inicial
             solo cargaba el administrador y las categorías, así que al clonar el
-            repositorio el banco de preguntas aparecía vacío; ahora cada audio
+            repositorio el banco de preguntas aparecía vacío. Ahora cada audio
             se registra con su respuesta y la sincronización vuelca también las
             preguntas, sin duplicar nada al reiniciar. Además, los servicios
             esperan a que MySQL esté listo antes de arrancar, eliminar una
@@ -404,7 +405,7 @@
           <h3 data-i18n="au.balance.different.h3">Qué haría distinto</h3>
           <ul>
             <li data-i18n="au.balance.different.li1">Pondría un API Gateway como único punto de entrada y aplicaría autenticación con JWT en todos los microservicios, en lugar de que el frontend llame a cada servicio por su puerto.</li>
-            <li data-i18n="au.balance.different.li2">Mediría qué algoritmo funciona mejor: si el estudiante mejora con el tiempo en cada categoría y si retiene lo aprendido tras días sin practicar, para justificar con datos qué estrategia usar en cada caso.</li>
+            <li data-i18n="au.balance.different.li2">Mediría qué algoritmo funciona mejor, viendo si el estudiante mejora con el tiempo en cada categoría y si retiene lo aprendido tras días sin practicar, para justificar con datos qué estrategia usar en cada caso.</li>
             <li data-i18n="au.balance.different.li3">Combinaría criterios dentro de una misma sesión, por ejemplo preguntas nuevas con preguntas de refuerzo, para equilibrar exploración, consolidación y corrección de errores.</li>
             <li data-i18n="au.balance.different.li4">La desplegaría en la nube, la haría responsive para usarla desde el móvil y ampliaría el modelo de preguntas para admitir imágenes, como radiografías o electrocardiogramas.</li>
           </ul>

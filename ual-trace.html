@@ -60,16 +60,16 @@
         <p class="exp-eyebrow" data-i18n="uat.eyebrow">Experiencia laboral · Detalle del puesto</p>
         <h1 data-i18n="uat.h1">Desarrollador full-stack en el Applied Computing Group (ACG)</h1>
         <p class="exp-lead" data-i18n="uat.lead">
-          Prácticas de desarrollo full-stack en el Applied Computing Group de
-          la Universidad de Almería, dedicadas a UAL Trace: una aplicación web
-          que muestra sobre un mapa del campus dónde se concentra la gente a
-          partir de los dispositivos conectados a la red wifi, con datos que se
+          Prácticas de desarrollo full-stack en el Applied Computing Group de la
+          Universidad de Almería, dedicadas a UAL Trace, una aplicación web que
+          muestra sobre un mapa del campus dónde se concentra la gente a partir
+          de los dispositivos conectados a la red wifi, con datos que se
           renuevan cada 2 minutos. Partiendo de un prototipo de frontend que
           funcionaba con datos simulados, y en coordinación diaria con mi
           responsable en el grupo, llevé el grueso del desarrollo del resto de
-          la plataforma: la ingesta de datos, la base de datos geoespacial, la API, la conexión
-          del frontend con datos reales, nuevas capas de visualización, el
-          módulo de informes y el despliegue.
+          la plataforma. Eso incluye la ingesta de datos, la base de datos
+          geoespacial, la API, la conexión del frontend con datos reales, nuevas
+          capas de visualización, el módulo de informes y el despliegue.
         </p>
         <ul class="exp-tags exp-hero-tags">
           <li>Next.js</li>
@@ -125,11 +125,10 @@
         <div class="exp-detail-card reveal-left reveal-2">
           <h3 data-i18n="uat.context.origin.h3">Cómo surgió</h3>
           <p data-i18n="uat.context.origin.p">
-            Surgió de una conversación informal con un profesor del propio
-            grupo (ACG): al terminar una clase me planteó la idea de sacar
-            adelante un proyecto. Me interesó la propuesta, la fuimos
-            concretando y terminó formalizándose como prácticas de empresa
-            extracurriculares.
+            Surgió de una conversación informal con un profesor del propio grupo
+            (ACG). Al terminar una clase me planteó la idea de sacar adelante un
+            proyecto. Me interesó la propuesta, la fuimos concretando y terminó
+            formalizándose como prácticas de empresa extracurriculares.
           </p>
         </div>
       </div>
@@ -144,7 +143,7 @@
           <p data-i18n="uat.desc.idea.p">
             El objetivo era una aplicación web que mostrara sobre un mapa del
             campus dónde se concentra la gente, usando como sensor la propia red
-            wifi de la universidad: la infraestructura Cisco Meraki estima la
+            wifi de la universidad. La infraestructura Cisco Meraki estima la
             posición de cada dispositivo conectado a partir de los puntos de
             acceso que lo detectan. Sobre el mapa se pinta una malla de
             hexágonos coloreada según el número de dispositivos, de amarillo
@@ -156,8 +155,8 @@
         <div class="exp-detail-card reveal-left reveal-2">
           <h3 data-i18n="uat.desc.purpose.h3">Para qué servía</h3>
           <p data-i18n="uat.desc.purpose.p">
-            Esa información abre bastantes posibilidades de análisis: saber qué
-            edificios y plantas concentran más gente en cada momento, cuánto
+            Esa información abre bastantes posibilidades de análisis, como saber
+            qué edificios y plantas concentran más gente en cada momento, cuánto
             tiempo se queda la gente en cada planta, qué densidad de personas
             por metro cuadrado tiene cada edificio o cuáles son los
             desplazamientos más habituales entre edificios.
@@ -170,8 +169,7 @@
             El frontend heredado tenía la malla de hexágonos, las vistas de
             edificio y unas primeras gráficas, pero funcionaba con datos
             simulados y ficheros locales, sin backend. Lo conecté a datos reales
-            y, sobre el mismo mapa, fui añadiendo distintas capas de
-            visualización:
+            y fui añadiendo sobre el mismo mapa estas capas de visualización.
           </p>
           <ul>
             <li data-i18n-html="uat.desc.built.li1">
@@ -206,7 +204,7 @@
             </li>
           </ul>
           <p data-i18n="uat.desc.built.p2">
-            Además desarrollé un módulo de estadísticas e informes: gráficas
+            Además desarrollé un módulo de estadísticas e informes con gráficas
             globales (reparto por edificio, tendencia de ocupación y zonas más
             concurridas) y por edificio (ocupación por planta, densidad por m² y
             tiempo de permanencia), un panel de «Datos de interés» con
@@ -227,13 +225,13 @@
         <h2 class="section-title reveal-left" data-i18n="uat.contrib.title">Mi aportación</h2>
         <p class="reveal-left" data-i18n="uat.contrib.lead">
           Trabajé dentro del ACG en coordinación diaria con mi responsable en el
-          grupo: las decisiones técnicas las discutíamos y validábamos en común,
+          grupo. Las decisiones técnicas las discutíamos y validábamos en común,
           nos coordinábamos mediante ramas y revisiones de código, y en
           reuniones frecuentes ajustábamos el alcance. Dentro de ese reparto, y
           partiendo del prototipo de frontend que heredé de otro desarrollador,
-          llevé el grueso del desarrollo: el modelo de datos, la ingesta, el
-          backend, la integración con el frontend, la evolución del propio
-          frontend, las pruebas y el despliegue.
+          llevé el grueso del desarrollo, que abarcó el modelo de datos, la
+          ingesta, el backend, la integración con el frontend, la evolución del
+          propio frontend, las pruebas y el despliegue.
         </p>
 
         <div class="exp-detail-card reveal-left">
@@ -243,13 +241,13 @@
             malla de hexágonos, las vistas de edificio y algunas gráficas sobre
             datos simulados. Lo conecté a la API real, terminé lo que estaba a
             medias, eliminé código muerto y versiones antiguas, y lo seguí
-            desarrollando: las capas de densidad, edificio y rutas, el modo
+            desarrollando con las capas de densidad, edificio y rutas, el modo
             histórico con reproducción, el módulo de informes y PDF, la
             adaptación a móvil y muchas optimizaciones de carga. También añadí
             pruebas del frontend con React Testing Library, que renderizan los
             componentes y simulan la interacción del usuario para comprobar que
-            la interfaz responde como se espera. A día de hoy, alrededor del
-            80 % del código del frontend es mío.
+            la interfaz responde como se espera. A día de hoy, alrededor del 80
+            % del código del frontend es mío.
           </p>
         </div>
 
@@ -261,12 +259,12 @@
           </p>
           <ul>
             <li data-i18n-html="uat.contrib.decisions.li1">
-              <strong>Base de datos.</strong> Propuse PostgreSQL con PostGIS porque
-              el problema es geoespacial: edificios con su polígono real, puntos
-              de acceso, posiciones y una malla de hexágonos. Diseñé el modelo
-              (12 tablas con borrado lógico e índices espaciales) y lo fui
-              ampliando con migraciones, entre ellas índices pensados para las
-              consultas por ventana de tiempo.
+              <strong>Base de datos.</strong> Propuse PostgreSQL con PostGIS
+              porque el problema es geoespacial. Hay edificios con su polígono
+              real, puntos de acceso, posiciones y una malla de hexágonos.
+              Diseñé el modelo (12 tablas con borrado lógico e índices
+              espaciales) y lo fui ampliando con migraciones, entre ellas
+              índices pensados para las consultas por ventana de tiempo.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li2">
               <strong>Backend.</strong> Node.js con Express y TypeScript. Diseñé
@@ -282,9 +280,9 @@
               descarta los movimientos de menos de 2 metros, seudonimiza los
               identificadores con un hash HMAC-SHA512 antes de guardarlos y suma
               cada observación al hexágono más cercano mediante una búsqueda de
-              vecino más próximo en PostGIS. Otros flujos cargan los catálogos:
-              edificios y plantas, puntos de acceso, la malla de hexágonos y los
-              polígonos de los edificios.
+              vecino más próximo en PostGIS. Otros flujos cargan los catálogos
+              de edificios y plantas, puntos de acceso, la malla de hexágonos y
+              los polígonos de los edificios.
             </li>
             <li data-i18n-html="uat.contrib.decisions.li4">
               <strong>Preparación de datos.</strong> Scripts en Node.js para
@@ -305,7 +303,7 @@
         <div class="exp-detail-card reveal-left reveal-3">
           <h3 data-i18n="uat.contrib.privacy.h3">Privacidad</h3>
           <p data-i18n="uat.contrib.privacy.p">
-            Los datos se trataron como sensibles desde el diseño: la MAC y el
+            Los datos se trataron como sensibles desde el diseño. La MAC y el
             identificador de usuario se guardan seudonimizados con HMAC desde la
             propia ingesta, y lo que muestra la aplicación son siempre recuentos
             agregados por hexágono, planta o edificio, nunca la posición de una
@@ -318,14 +316,15 @@
           <p data-i18n="uat.contrib.ongoing.p">
             Con datos reales y varios usuarios a la vez aparecieron los
             problemas de rendimiento, y buena parte de la recta final fue
-            optimizar: una caché en memoria que agrupa las peticiones simultáneas
-            idénticas en una sola consulta, el backend repartido en varios
-            procesos con el módulo cluster de Node.js, índices de cobertura
-            creados en caliente (con una página de mantenimiento para aplicarlos
-            sin acceso directo a la base de datos), un endpoint que sustituyó
-            hasta 13 peticiones secuenciales del modo en vivo por una sola y
-            cargas más ligeras de hexágonos, plantas y rutas en el frontend. A la
-            vez fui adaptando todas las capas a cada nueva funcionalidad.
+            optimizar. Las mejoras fueron una caché en memoria que agrupa las
+            peticiones simultáneas idénticas en una sola consulta, el backend
+            repartido en varios procesos con el módulo cluster de Node.js,
+            índices de cobertura creados en caliente (con una página de
+            mantenimiento para aplicarlos sin acceso directo a la base de
+            datos), un endpoint que sustituyó hasta 13 peticiones secuenciales
+            del modo en vivo por una sola y cargas más ligeras de hexágonos,
+            plantas y rutas en el frontend. A la vez fui adaptando todas las
+            capas a cada nueva funcionalidad.
           </p>
         </div>
       </div>
@@ -381,8 +380,8 @@
               <strong>Fuente de datos.</strong> La API de localización de Cisco
               Meraki, que envía periódicamente al webhook de n8n las
               observaciones de los dispositivos detectados por los puntos de
-              acceso wifi: posición estimada, planta y punto de acceso más
-              cercano.
+              acceso wifi, con su posición estimada, su planta y el punto de
+              acceso más cercano.
             </li>
             <li data-i18n-html="uat.arch.li2">
               <strong>Ingesta (n8n).</strong> Agrupa por dispositivo, filtra los
@@ -397,14 +396,14 @@
               temporales y migraciones versionadas.
             </li>
             <li data-i18n-html="uat.arch.li4">
-              <strong>Backend (Node.js + Express + TypeScript).</strong> API REST
-              en varios procesos con caché en memoria, organizada en tres
-              bloques: catálogos (edificios, plantas, malla y mapa de calor),
-              gráficas globales e <em>insights</em>, métricas calculadas como el
-              tiempo de permanencia, la densidad por m², la volatilidad por
-              hexágono, las anomalías de tráfico por punto de acceso (z-score),
-              el comportamiento por sistema operativo y los flujos
-              origen-destino entre edificios. Documentada con OpenAPI.
+              <strong>Backend (Node.js + Express + TypeScript).</strong> API
+              REST en varios procesos con caché en memoria, organizada en tres
+              bloques. Son los catálogos (edificios, plantas, malla y mapa de
+              calor), las gráficas globales y los <em>insights</em>, métricas
+              calculadas como el tiempo de permanencia, la densidad por m², la
+              volatilidad por hexágono, las anomalías de tráfico por punto de
+              acceso (z-score), el comportamiento por sistema operativo y los
+              flujos origen-destino entre edificios. Documentada con OpenAPI.
             </li>
             <li data-i18n-html="uat.arch.li5">
               <strong>Frontend (Next.js).</strong> Leaflet sobre OpenStreetMap y
@@ -428,7 +427,7 @@
       <div class="container">
         <h2 class="section-title reveal-left" data-i18n="uat.balance.title">Balance</h2>
         <p class="reveal-left" data-i18n="uat.balance.lead">
-          Es el proyecto en el que más responsabilidad he tenido: partiendo de
+          Es el proyecto en el que más responsabilidad he tenido. Partiendo de
           un prototipo de frontend y en coordinación constante con mi
           responsable, llevé el grueso de la plataforma hasta producción,
           proponiendo las decisiones técnicas y defendiéndolas en nuestras
@@ -439,37 +438,39 @@
           <h3 data-i18n="uat.balance.gains.h3">Qué me llevo</h3>
           <ul>
             <li data-i18n="uat.balance.gains.li1">
-              Llevar un proyecto real de punta a punta: modelo de datos, ingesta,
-              API, frontend, pruebas de backend y frontend, despliegue y
-              optimización con usuarios reales.
+              Llevar un proyecto real de punta a punta, desde el modelo de
+              datos, la ingesta y la API hasta el frontend, las pruebas de
+              backend y frontend, el despliegue y la optimización con usuarios
+              reales.
             </li>
             <li data-i18n="uat.balance.gains.team">
-              Trabajar en equipo dentro de un grupo de investigación: continuar
-              el código de otro desarrollador, coordinarme a diario con mi
-              responsable mediante ramas y revisiones de código, y ajustar juntos
-              el alcance en reuniones frecuentes.
+              Trabajar en equipo dentro de un grupo de investigación,
+              continuando el código de otro desarrollador, coordinándome a
+              diario con mi responsable mediante ramas y revisiones de código y
+              ajustando juntos el alcance en reuniones frecuentes.
             </li>
             <li data-i18n="uat.balance.gains.li2">
               Proponer decisiones técnicas y justificarlas ante mi responsable
-              por el problema concreto: una base de datos geoespacial porque el dominio
-              eran edificios, posiciones y polígonos, n8n porque la ingesta
-              había que ajustarla rápido, y Express con TypeScript y pruebas
-              porque la API cambiaba constantemente.
+              por el problema concreto. Propuse una base de datos geoespacial
+              porque el dominio eran edificios, posiciones y polígonos, n8n
+              porque la ingesta había que ajustarla rápido, y Express con
+              TypeScript y pruebas porque la API cambiaba constantemente.
             </li>
             <li data-i18n="uat.balance.gains.li3">
-              Trabajar con datos reales e imperfectos: la posición por wifi tiene
-              ruido, y métricas como las rutas entre edificios solo dieron
-              resultados creíbles al filtrar ese ruido con umbrales de movimiento
-              y de estancia mínima.
+              Trabajar con datos reales e imperfectos. La posición por wifi
+              tiene ruido, y métricas como las rutas entre edificios solo dieron
+              resultados creíbles al filtrar ese ruido con umbrales de
+              movimiento y de estancia mínima.
             </li>
             <li data-i18n="uat.balance.gains.li4">
-              Optimizar con criterio: localizar el cuello de botella y atacarlo
-              con índices, caché, agregación en la base de datos y menos
-              peticiones desde el cliente.
+              Optimizar con criterio, localizando el cuello de botella y
+              atacándolo con índices, caché, agregación en la base de datos y
+              menos peticiones desde el cliente.
             </li>
             <li data-i18n="uat.balance.gains.li5">
-              Tratar la privacidad como un requisito de diseño: seudonimización
-              en la ingesta y solo datos agregados en la interfaz.
+              Tratar la privacidad como un requisito de diseño, con
+              seudonimización en la ingesta y solo datos agregados en la
+              interfaz.
             </li>
           </ul>
         </div>
@@ -479,8 +480,8 @@
           <ul>
             <li data-i18n="uat.balance.different.li1">
               Dedicar más tiempo al diseño inicial del modelo de datos y de la
-              API: buena parte de los refactores posteriores vino de que el
-              alcance se fue concretando sobre la marcha.
+              API, porque buena parte de los refactores posteriores vino de que
+              el alcance se fue concretando sobre la marcha.
             </li>
             <li data-i18n="uat.balance.different.li2">
               Fijar antes un contrato estable de endpoints para reducir el

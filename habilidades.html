@@ -6,7 +6,7 @@
   <title>Habilidades · José Carlos Ruiz Sánchez</title>
   <meta name="description" content="Habilidades de José Carlos Ruiz Sánchez organizadas como en su CV: técnicas (lenguajes, frameworks, bases de datos, DevOps, testing), académicas, transversales e idiomas, con el contexto real de uso de cada una." />
   <meta name="author" content="José Carlos Ruiz Sánchez" />
-  <meta name="keywords" content="habilidades, JavaScript, TypeScript, Node.js, Express.js, React, React Router, Vite, Angular, Next.js, Python, Java, Spring, Spark, PostgreSQL, PostGIS, MySQL, MongoDB, Docker, API Gateway, Nginx, JWT, Vitest, n8n, Git, Big Data, Power BI, ISO 27001, ISO 9001, análisis de riesgos, RGPD, consultoría" />
+  <meta name="keywords" content="habilidades, JavaScript, TypeScript, Node.js, Express.js, React, React Router, Vite, Angular, Next.js, Python, Java, Spring, Spark, PostgreSQL, PostGIS, MySQL, MongoDB, Docker, OpenStack, Google Cloud, Azure, API Gateway, Nginx, JWT, Vitest, n8n, Git, Big Data, Power BI, ISO 27001, ISO 9001, análisis de riesgos, RGPD, consultoría, Scrum, Kanban, metodologías ágiles, análisis DAFO, ERP, Dolibarr" />
   <link rel="canonical" href="https://jrs407.github.io/web-personal/habilidades.html" />
 
   <meta property="og:type" content="website" />
@@ -95,15 +95,13 @@
               Trabajo sobre todo con JavaScript y TypeScript, tanto en backend
               como en frontend, y uso el tipado estático de TypeScript para
               modelar el dominio y detectar errores antes de ejecutar. También
-              programo en Java. Python lo uso para modelos de datos e IA, y R
-              para análisis estadístico.
+              programo en Java. Python lo uso para modelos de datos e IA.
             </p>
             <ul class="skill-tags">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>Java</li>
               <li>Python</li>
-              <li>R</li>
             </ul>
             <p class="skill-applied" data-i18n-html="hab.card.lang.applied">
               <span>Dónde lo he aplicado</span>
@@ -197,9 +195,9 @@
               <li data-i18n="hab.tag.scheduledIngestion">Ingesta programada</li>
             </ul>
             <p class="skill-applied" data-i18n-html="hab.card.auto.applied">
-              <span>Dónde lo he aplicado</span>
-              Pipeline de telemetría geoespacial del campus: ingesta automatizada
-              cada 2 minutos hacia PostGIS.
+              <span>Dónde lo he aplicado</span> Pipeline de telemetría
+              geoespacial del campus, con ingesta automatizada cada 2 minutos
+              hacia PostGIS.
             </p>
           </article>
 
@@ -235,14 +233,48 @@
           </article>
 
           <article class="skill-card reveal-left reveal-3">
+            <h3 data-i18n="hab.card.cloud.h3">Plataformas cloud</h3>
+            <div class="skill-icons">
+              <img src="assets/img/Habilidades/Portada/OpenStack.jpg" alt="" draggable="false" />
+              <img src="assets/img/Habilidades/Portada/googlecloud.png" alt="" draggable="false" />
+              <img src="assets/img/Habilidades/Portada/azure.webp" alt="" draggable="false" />
+            </div>
+            <p data-i18n="hab.card.cloud.p">
+              Despliego y configuro máquinas virtuales con Ubuntu en OpenStack,
+              Google Cloud y Azure. En OpenStack asigno IP flotantes para
+              acceder a las instancias desde fuera y les asocio volúmenes de
+              almacenamiento. En Google Cloud y Azure instalo servidores web
+              como Apache y configuro las reglas de firewall para que sean
+              accesibles desde internet. En Azure automatizo todo el proceso con
+              un script.
+            </p>
+            <ul class="skill-tags">
+              <li>OpenStack</li>
+              <li>Google Cloud</li>
+              <li>Azure</li>
+              <li>Ubuntu</li>
+              <li>Apache</li>
+              <li data-i18n="hab.tag.vms">Máquinas virtuales</li>
+              <li data-i18n="hab.tag.firewall">Reglas de firewall</li>
+              <li data-i18n="hab.tag.deployScripts">Scripts de despliegue</li>
+            </ul>
+            <p class="skill-applied" data-i18n-html="hab.card.cloud.applied">
+              <span>Dónde lo he aplicado</span> En el Máster en Ingeniería
+              Informática, desplegando una máquina virtual en cada una de las
+              tres plataformas. Más detalle en
+              <a href="formacion.html#cloud">Formación Académica</a>.
+            </p>
+          </article>
+
+          <article class="skill-card reveal-left reveal-3">
             <h3 data-i18n="hab.card.vcs.h3">Control de versiones</h3>
             <div class="skill-icons">
               <img src="assets/img/Habilidades/Portada/git.png" alt="" draggable="false" />
             </div>
             <p data-i18n="hab.card.vcs.p">
-              Uso Git en flujo colaborativo: ramas por funcionalidad, revisión
-              de cambios, resolución de conflictos y un historial de commits
-              legible.
+              Uso Git en flujo colaborativo, con ramas por funcionalidad,
+              revisión de cambios, resolución de conflictos y un historial de
+              commits legible.
             </p>
             <ul class="skill-tags">
               <li>Git</li>
@@ -343,7 +375,7 @@
               <img src="assets/img/Habilidades/Portada/Power-BI-Logo.png" alt="" draggable="false" />
             </div>
             <p data-i18n="hab.card.bi.p">
-              Creo informes y cuadros de mando en Power BI: importo y preparo
+              Creo informes y cuadros de mando en Power BI. Importo y preparo
               los datos, defino indicadores (KPI) y los muestro en gráficos para
               seguir cómo evoluciona un negocio.
             </p>
@@ -376,18 +408,23 @@
         <ul class="skill-list">
           <li class="reveal-left">
             <h3 data-i18n="hab.academic.se.h3">Ingeniería del Software</h3>
-            <p data-i18n="hab.academic.se.p">
+            <p data-i18n-html="hab.academic.se.p">
               Análisis y especificación de requisitos, patrones de diseño,
               arquitecturas (incluida la de microservicios), modelado UML y
-              criterios de calidad y mantenibilidad.
+              criterios de calidad y mantenibilidad. También desarrollo web,
+              optimización de código, entrevistas y revisiones periódicas con
+              el cliente y metodologías ágiles como Scrum y Kanban. Más detalle
+              en <a href="formacion.html#grado">Formación Académica</a>.
             </p>
           </li>
           <li class="reveal-left">
             <h3 data-i18n="hab.academic.is.h3">Sistemas de Información</h3>
-            <p data-i18n="hab.academic.is.p">
+            <p data-i18n-html="hab.academic.is.p">
               Modelado conceptual de datos, procesos de negocio e integración
-              entre sistemas heterogéneos. Me ayuda a entender qué necesita
-              realmente quien va a usar un sistema.
+              entre sistemas heterogéneos, siempre desde lo que necesita una
+              empresa en la práctica. Incluye análisis DAFO de empresas reales y
+              la implantación y personalización del ERP Dolibarr. Más detalle en
+              <a href="formacion.html#grado">Formación Académica</a>.
             </p>
           </li>
           <li class="reveal-left">
@@ -396,6 +433,15 @@
               Procesamiento distribuido con Spark, diseño de pipelines de datos,
               cómputo en clúster y cómo escalar cuando los datos no caben en una
               sola máquina.
+            </p>
+          </li>
+          <li class="reveal-left">
+            <h3 data-i18n="hab.academic.cloud.h3">Computación en la nube</h3>
+            <p data-i18n-html="hab.academic.cloud.p">
+              Despliegue de máquinas Ubuntu en OpenStack, Google Cloud y Azure,
+              con IP flotante, volúmenes, Apache, reglas de firewall y un script
+              que automatiza la configuración. Más detalle en
+              <a href="formacion.html#cloud">Formación Académica</a>.
             </p>
           </li>
           <li class="reveal-left">
@@ -412,8 +458,8 @@
               Normas ISO/IEC 27001 (seguridad de la información) y familia ISO
               9000 (gestión de la calidad), análisis de riesgos, planes de
               contingencia, adecuación al RGPD y métricas de rendimiento. Lo
-              puse en práctica con una empresa real en la asignatura Seguridad y
-              Cumplimiento Normativo. Más detalle en
+              puse en práctica en un proyecto de consultoría con una empresa
+              real. Más detalle en
               <a href="formacion.html#consultoria">Formación Académica</a>.
             </p>
           </li>

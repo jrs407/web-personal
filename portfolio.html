@@ -61,7 +61,7 @@
         <p class="exp-eyebrow" data-i18n="pf.eyebrow">Proyectos · Detalle del proyecto</p>
         <h1 data-i18n="pf.h1">Portfolio</h1>
         <p class="exp-lead" data-i18n="pf.lead">
-          Este mismo sitio web: mi portfolio personal multipágina, construido
+          Este mismo sitio web es mi portfolio personal multipágina, construido
           con HTML, CSS y JavaScript puro, sin frameworks ni paso de build, y
           desplegado en GitHub Pages.
         </p>
@@ -122,8 +122,8 @@
             de lo que soy capaz ante un entrevistador. Decidí construirla desde
             cero, sin plantillas, porque el propio sitio es también una muestra
             de mis habilidades. Empecé a darle forma el 1 de septiembre de 2026
-            y no tiene fecha de cierre: siempre habrá proyectos y trabajos
-            nuevos que añadir.
+            y no tiene fecha de cierre, porque siempre habrá proyectos y
+            trabajos nuevos que añadir.
           </p>
         </div>
       </div>
@@ -136,7 +136,7 @@
         <div class="exp-detail-card reveal-left">
           <h3 data-i18n="pf.desc.what.h3">Qué es</h3>
           <p data-i18n="pf.desc.what.p">
-            Este mismo sitio web: un portfolio personal multipágina (Sobre mí,
+            Este mismo sitio web es un portfolio personal multipágina (Sobre mí,
             Proyectos, Experiencia, Habilidades, Formación y Contacto)
             construido con HTML, CSS y JavaScript puro, sin frameworks ni paso
             de build, y desplegado en GitHub Pages. Lo hice para dar contexto al
@@ -150,7 +150,7 @@
             <li data-i18n="pf.desc.includes.li1">Sitio de once páginas en HTML, CSS y JavaScript puro, sin frameworks ni bundler.</li>
             <li data-i18n="pf.desc.includes.li2">Bilingüe (español e inglés) con un diccionario i18n propio en JavaScript. El idioma y el tema elegidos se guardan entre visitas con localStorage.</li>
             <li data-i18n="pf.desc.includes.li3">Tema claro y oscuro que respeta la preferencia del sistema (prefers-color-scheme).</li>
-            <li data-i18n="pf.desc.includes.li4">Componentes interactivos hechos a mano: carruseles con arrastre táctil, cronologías con buscador y ordenación, y menú responsive.</li>
+            <li data-i18n="pf.desc.includes.li4">Componentes interactivos hechos a mano, como carruseles con arrastre táctil, cronologías con buscador y ordenación y el menú responsive.</li>
             <li data-i18n="pf.desc.includes.li5">Animaciones de aparición al hacer scroll con IntersectionObserver.</li>
             <li data-i18n="pf.desc.includes.li6">Atención a la accesibilidad (enlace para saltar al contenido, roles ARIA, aria-expanded) y al SEO (meta description, Open Graph, Twitter Card, canonical) en cada página.</li>
             <li data-i18n="pf.desc.includes.li7">Entorno de desarrollo local con Docker y browser-sync con recarga automática.</li>
@@ -165,19 +165,19 @@
 
         <div class="exp-detail-card reveal-left">
           <p data-i18n="pf.decisions.p">
-            El punto de partida fue el destino: quería desplegar en GitHub Pages,
-            que sirve solo ficheros estáticos. El despliegue es un push a
-            main, sin acción de CI ni compilación. Esa restricción marcó el resto
-            de decisiones, y en todas prioricé mantener el sitio ligero y sin
-            dependencias.
+            El punto de partida fue el destino. Quería desplegar en GitHub
+            Pages, que sirve solo ficheros estáticos. El despliegue es un push a
+            main, sin acción de CI ni compilación. Esa restricción marcó el
+            resto de decisiones, y en todas prioricé mantener el sitio ligero y
+            sin dependencias.
           </p>
           <ul>
             <li data-i18n="pf.decisions.li1">HTML, CSS y JavaScript puro, sin framework ni empaquetador. Pages no ejecuta un paso de build, y un sitio estático consume menos memoria y recursos, así que es más difícil topar con los límites del servicio a medida que el sitio crece. A cambio, asumo que no hay componentes reutilizables y que el head, la cabecera y el pie se repiten en cada página.</li>
             <li data-i18n="pf.decisions.li2">Once páginas independientes en lugar de una SPA. Cada URL entrega HTML real en la primera petición, sin router ni renderizado en cliente, lo que favorece el SEO y el rastreo y hace que el contenido no dependa de JavaScript.</li>
-            <li data-i18n="pf.decisions.li3">Sistema de traducción propio: un único objeto con los diccionarios español e inglés en script.js, claves declaradas en el marcado con data-i18n y una función que recorre los nodos y sustituye el texto. El idioma se guarda en localStorage y se aplica al cargar, antes de pintar. Así me ahorro una librería, una petición de red por idioma y un paso de extracción de cadenas, a cambio de mantener las traducciones a mano. Al principio la cabecera fallaba al cambiar de idioma, pero ya está resuelto.</li>
+            <li data-i18n="pf.decisions.li3">Sistema de traducción propio. Es un único objeto con los diccionarios español e inglés en script.js, con claves declaradas en el marcado con data-i18n y una función que recorre los nodos y sustituye el texto. El idioma se guarda en localStorage y se aplica al cargar, antes de pintar. Así me ahorro una librería, una petición de red por idioma y un paso de extracción de cadenas, a cambio de mantener las traducciones a mano. Al principio la cabecera fallaba al cambiar de idioma, pero ya está resuelto.</li>
             <li data-i18n="pf.decisions.li4">Tema claro y oscuro mediante un atributo data-theme en la raíz y variables CSS. En la primera visita se respeta prefers-color-scheme y después manda la elección guardada en localStorage. El tema se aplica antes de pintar para no provocar un parpadeo.</li>
             <li data-i18n="pf.decisions.li5">Carruseles, cronologías con buscador y menú responsive escritos a mano, sin dependencias. El carrusel mueve una pista con transform, admite arrastre táctil y desactiva la transición mientras se arrastra. Las cronologías ordenan por fecha y filtran por el texto y unas palabras clave. Las apariciones al hacer scroll usan un único IntersectionObserver.</li>
-            <li data-i18n="pf.decisions.li6">Para desarrollar en local, un contenedor con browser-sync que sirve la carpeta y recarga el navegador al guardar. Frente a una extensión del editor, cualquiera con Docker levanta el mismo servidor sin configurar nada, y es el mismo flujo con contenedores que uso en proyectos mayores. En Windows el contenedor no recibe eventos de archivo, así que se fuerza el sondeo. Este entorno no se despliega: Pages sirve los ficheros tal cual.</li>
+            <li data-i18n="pf.decisions.li6">Para desarrollar en local, un contenedor con browser-sync que sirve la carpeta y recarga el navegador al guardar. Frente a una extensión del editor, cualquiera con Docker levanta el mismo servidor sin configurar nada, y es el mismo flujo con contenedores que uso en proyectos mayores. En Windows el contenedor no recibe eventos de archivo, así que se fuerza el sondeo. Este entorno no se despliega, porque Pages sirve los ficheros tal cual.</li>
           </ul>
         </div>
       </div>
@@ -214,18 +214,18 @@
 
         <div class="exp-detail-card reveal-left">
           <p data-i18n="pf.arch.detail.p">
-            No hay separación entre código fuente y compilado: la raíz del
+            No hay separación entre código fuente y compilado. La raíz del
             repositorio es lo que GitHub Pages publica, con un fichero .nojekyll
-            para que sirva los archivos sin procesarlos. En la raíz están las once
-            páginas HTML y todo lo demás cuelga de assets/, con el CSS y el
+            para que sirva los archivos sin procesarlos. En la raíz están las
+            once páginas HTML y todo lo demás cuelga de assets/, con el CSS y el
             JavaScript organizados en dos capas, una global y otra por página.
           </p>
           <ul>
-            <li data-i18n="pf.arch.detail.li1">CSS en capas. style.css (unas 850 líneas) es lo común: reset, los tokens de diseño como variables CSS (tema claro y su variante [data-theme="dark"]), el contenedor de layout, la cabecera y el pie, los botones, el carrusel y las animaciones de aparición. Cada página añade después una hoja propia solo con sus componentes. La hoja experiencia.css la comparten experiencia.html, proyectos.html y las páginas de detalle (ual-trace.html, tokimori.html, puppyclicker.html, auscultify.html y esta), y proyectos.css son cuatro líneas.</li>
-            <li data-i18n="pf.arch.detail.li2">JavaScript con la misma división. script.js (unas 1.300 líneas) lo carga cada página: comportamiento de la cabecera (menú responsive, cambio de tema y de idioma), el objeto TRANSLATIONS con los dos diccionarios, la función que traduce la página, el IntersectionObserver de las apariciones y el carrusel. Después cada página carga un script pequeño: experiencia.js y proyectos.js mueven la cronología con buscador y orden, y no hacen nada si su elemento no está en la página. Además, experiencia.js amplía la imagen de cabecera de las páginas de detalle al hacer clic. Son scripts clásicos al final de &lt;body&gt;, sin módulos, en un ámbito global compartido.</li>
+            <li data-i18n="pf.arch.detail.li1">CSS en capas. style.css (unas 850 líneas) es lo común, con el reset, los tokens de diseño como variables CSS (tema claro y su variante [data-theme="dark"]), el contenedor de layout, la cabecera y el pie, los botones, el carrusel y las animaciones de aparición. Cada página añade después una hoja propia solo con sus componentes. La hoja experiencia.css la comparten experiencia.html, proyectos.html y las páginas de detalle (ual-trace.html, tokimori.html, puppyclicker.html, auscultify.html y esta), y proyectos.css son cuatro líneas.</li>
+            <li data-i18n="pf.arch.detail.li2">JavaScript con la misma división. script.js (unas 1.300 líneas) lo carga cada página y contiene el comportamiento de la cabecera (menú responsive, cambio de tema y de idioma), el objeto TRANSLATIONS con los dos diccionarios, la función que traduce la página, el IntersectionObserver de las apariciones y el carrusel. Después cada página carga un script pequeño, como experiencia.js y proyectos.js, que mueven la cronología con buscador y orden y no hacen nada si su elemento no está en la página. Además, experiencia.js amplía la imagen de cabecera de las páginas de detalle al hacer clic. Son scripts clásicos al final de &lt;body&gt;, sin módulos, en un ámbito global compartido.</li>
             <li data-i18n="pf.arch.detail.li3">El español es el texto de origen en el marcado y los atributos data-i18n (y sus variantes para title, alt, aria-label y placeholder) nombran la clave. Al cargar, script.js lee el idioma de localStorage, por defecto español, y sustituye el contenido de cada nodo marcado.</li>
             <li data-i18n="pf.arch.detail.li4">En assets/ están las imágenes en subcarpetas por página, con los iconos en su formato original (png, webp o svg) y un placeholder.svg compartido. Las tipografías (Space Grotesk e Inter) vienen de Google Fonts con preconnect, y los PDF del currículum (en español e inglés) están en assets/cv/ y se enlazan desde la portada.</li>
-            <li data-i18n="pf.arch.detail.li5">No hay package.json, dependencias ni compilación: los ficheros se escriben y se sirven tal cual. La única imagen Docker que existe es la del entorno de desarrollo local.</li>
+            <li data-i18n="pf.arch.detail.li5">No hay package.json, dependencias ni compilación. Los ficheros se escriben y se sirven tal cual. La única imagen Docker que existe es la del entorno de desarrollo local.</li>
           </ul>
         </div>
       </div>
@@ -236,7 +236,7 @@
         <h2 class="section-title reveal-left" data-i18n="pf.balance.title">Balance</h2>
         <p class="reveal-left" data-i18n="pf.balance.lead">
           Como proyecto personal construido de cero y sin plantillas, cumple el
-          objetivo con el que empecé: sirve de escaparate técnico para lo que el
+          objetivo con el que empecé. Sirve de escaparate técnico para lo que el
           currículum no muestra y demuestra que puedo sacar adelante un proyecto
           completo sin depender de un framework. No es un proyecto grande, pero
           está publicado y lo sigo actualizando.
@@ -246,7 +246,7 @@
           <h3 data-i18n="pf.balance.gains.h3">Qué me llevo</h3>
           <ul>
             <li data-i18n="pf.balance.gains.li1">Al no usar ningún framework, cada pieza (el carrusel, las cronologías, el cambio de tema, la traducción) la he tenido que entender y escribir yo, sin que una librería la resuelva por debajo. Eso me ha obligado a manejar el DOM, los eventos y las variables CSS directamente.</li>
-            <li data-i18n="pf.balance.gains.li2">Montar el sistema de traducción a mano me ha enseñado los compromisos que normalmente esconde una librería de i18n: mantener dos diccionarios sincronizados, decidir cuándo se aplica la traducción para que no haya parpadeo de contenido sin traducir, y nombrar las claves de forma consistente entre páginas.</li>
+            <li data-i18n="pf.balance.gains.li2">Montar el sistema de traducción a mano me ha enseñado los compromisos que normalmente esconde una librería de i18n, como mantener dos diccionarios sincronizados, decidir cuándo se aplica la traducción para que no haya parpadeo de contenido sin traducir, y nombrar las claves de forma consistente entre páginas.</li>
             <li data-i18n="pf.balance.gains.li3">Usar Docker para el entorno de desarrollo local, aunque el sitio final no se despliega en contenedores, me ha servido para practicar el mismo flujo que uso en proyectos con más piezas.</li>
           </ul>
         </div>
