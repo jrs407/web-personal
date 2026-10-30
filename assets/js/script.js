@@ -56,7 +56,9 @@ const TRANSLATIONS = {
     "hero.imageAlt": "Imagen de presentación",
     "hero.introTitle": "Sobre mí",
     "hero.introText":
-      "Desarrollador full-stack. En prácticas construí en equipo, backend y frontend, un mapa interactivo que muestra los dispositivos conectados a la red wifi del campus de la Universidad de Almería, con datos actualizados cada 2 minutos mediante ingesta automatizada. Fuera del ámbito académico desarrollo proyectos propios por iniciativa personal, entre ellos Tokimori, una aplicación web full-stack con arquitectura de microservicios.",
+      'Desarrollador full-stack, graduado en Ingeniería Informática por la Universidad de Almería. De marzo a septiembre de 2026 estuve de prácticas en el Applied Computing Group de la universidad, donde trabajé en <a href="ual-trace.html">UAL Trace</a>, una aplicación web que muestra sobre un mapa del campus dónde se concentra la gente a partir de los dispositivos conectados a la wifi. Partí de un prototipo con datos simulados y llevé el grueso del desarrollo, con la ingesta en n8n, la base de datos en PostGIS, la API en Express.js y el despliegue con Docker. Cerca del 80&nbsp;% del código del frontend, en Next.js, es mío.',
+    "hero.introText2":
+      'Por mi cuenta he desarrollado <a href="tokimori.html">Tokimori</a>, una aplicación con seis microservicios detrás de un API Gateway en Nginx, autenticación con JWT y tests en el frontend y en el backend. Puedo incorporarme ya a jornada completa. El Máster que curso es online y compatible con el trabajo.',
     "hero.contact": "Contactar",
     "hero.downloadCv": "Descargar CV (español)",
     "hero.downloadCvEn": "Descargar CV (inglés)",
@@ -795,7 +797,9 @@ const TRANSLATIONS = {
     "hero.imageAlt": "Profile picture",
     "hero.introTitle": "About me",
     "hero.introText":
-      "Full-stack developer. During my internship I built, as part of a team and across backend and frontend, an interactive map showing the devices connected to the campus wifi network at the University of Almería, with data refreshed every 2 minutes through automated ingestion. Outside academia I build my own projects on personal initiative, among them Tokimori, a full-stack web app with a microservice architecture.",
+      'Full-stack developer with a Bachelor\'s Degree in Computer Engineering from the University of Almería. From March to September 2026 I did an internship at the university\'s Applied Computing Group, where I worked on <a href="ual-trace.html">UAL Trace</a>, a web app that shows on a campus map where people gather, based on the devices connected to the wifi. I started from a prototype running on mock data and did most of the development, including ingestion with n8n, the PostGIS database, the Express.js API and the Docker deployment. About 80% of the frontend code, in Next.js, is mine.',
+    "hero.introText2":
+      'On my own I\'ve built <a href="tokimori.html">Tokimori</a>, an app with six microservices behind an Nginx API Gateway, JWT authentication and tests on both the frontend and the backend. I can start right away, full time. The Master\'s I\'m studying is online and compatible with a job.',
     "hero.contact": "Get in touch",
     "hero.downloadCv": "Download CV (Spanish)",
     "hero.downloadCvEn": "Download CV (English)",

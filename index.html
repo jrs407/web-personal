@@ -84,36 +84,49 @@
       <p class="hero-text">Node.js · Express.js · React · Angular · PostgreSQL/PostGIS · Docker · n8n </p>
 
       <div class="hero-intro">
-        <div class="hero-image">
-          <img src="assets/img/Foto.jpg" data-i18n-alt="hero.imageAlt" alt="Imagen de presentación" />
+        <div class="hero-side">
+          <div class="hero-image">
+            <img src="assets/img/Foto.jpg" data-i18n-alt="hero.imageAlt" alt="Imagen de presentación" />
+          </div>
+
+          <div class="hero-actions">
+            <div class="hero-actions-row">
+              <a href="proyectos.html" class="btn btn-primary" data-i18n="cta.viewProjects">Ver proyectos</a>
+              <a href="contacto.html" class="btn btn-ghost" data-i18n="hero.contact">Contactar</a>
+            </div>
+            <div class="hero-actions-row">
+              <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" class="btn btn-ghost" download data-i18n="hero.downloadCv">Descargar CV (español)</a>
+              <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" class="btn btn-ghost" download data-i18n="hero.downloadCvEn">Descargar CV (inglés)</a>
+            </div>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/jrs407">GitHub</a>
+            <a href="https://www.linkedin.com/in/jose-carlos-ruiz-sanchez/">LinkedIn</a>
+            <a href="mailto:josecarlosruizsan@gmail.com">Email</a>
+          </div>
         </div>
         <div class="hero-copy">
           <h2 class="hero-intro-title" data-i18n="hero.introTitle">Sobre mí</h2>
-          <p class="hero-intro-text" data-i18n="hero.introText">
-            Desarrollador full-stack. En prácticas construí en equipo, backend y
-            frontend, un mapa interactivo que muestra los dispositivos conectados a
-            la red wifi del campus de la Universidad de Almería, con datos
-            actualizados cada 2 minutos mediante ingesta automatizada. Fuera del ámbito académico
-            desarrollo proyectos propios por iniciativa personal, entre ellos Tokimori,
-            una aplicación web full-stack con arquitectura de microservicios.
+          <p class="hero-intro-text" data-i18n-html="hero.introText">
+            Desarrollador full-stack, graduado en Ingeniería Informática por la
+            Universidad de Almería. De marzo a septiembre de 2026 estuve de
+            prácticas en el Applied Computing Group de la universidad, donde
+            trabajé en <a href="ual-trace.html">UAL Trace</a>, una aplicación web
+            que muestra sobre un mapa del campus dónde se concentra la gente a
+            partir de los dispositivos conectados a la wifi. Partí de un
+            prototipo con datos simulados y llevé el grueso del desarrollo, con
+            la ingesta en n8n, la base de datos en PostGIS, la API en Express.js
+            y el despliegue con Docker. Cerca del 80&nbsp;% del código del frontend,
+            en Next.js, es mío.
+          </p>
+          <p class="hero-intro-text" data-i18n-html="hero.introText2">
+            Por mi cuenta he desarrollado <a href="tokimori.html">Tokimori</a>,
+            una aplicación con seis microservicios detrás de un API Gateway en
+            Nginx, autenticación con JWT y tests en el frontend y en el backend.
+            Puedo incorporarme ya a jornada completa. El Máster que curso es
+            online y compatible con el trabajo.
           </p>
         </div>
-      </div>
-
-      <div class="hero-actions">
-        <div class="hero-actions-row">
-          <a href="proyectos.html" class="btn btn-primary" data-i18n="cta.viewProjects">Ver proyectos</a>
-          <a href="contacto.html" class="btn btn-ghost" data-i18n="hero.contact">Contactar</a>
-        </div>
-        <div class="hero-actions-row">
-          <a href="assets/cv/CV - Jose Carlos Ruiz Sanchez.pdf" class="btn btn-ghost" download data-i18n="hero.downloadCv">Descargar CV (español)</a>
-          <a href="assets/cv/CV_Jose_Carlos_Ruiz_Sanchez_EN.pdf" class="btn btn-ghost" download data-i18n="hero.downloadCvEn">Descargar CV (inglés)</a>
-        </div>
-      </div>
-      <div class="hero-social">
-        <a href="https://github.com/jrs407">GitHub</a>
-        <a href="https://www.linkedin.com/in/jose-carlos-ruiz-sanchez/">LinkedIn</a>
-        <a href="mailto:josecarlosruizsan@gmail.com">Email</a>
       </div>
     </section>
 
